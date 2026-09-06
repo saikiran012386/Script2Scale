@@ -1,3 +1,32 @@
+import fs from "fs";
+import path from "path";
+
+function loadEnvFile() {
+  const envPaths = [
+    path.resolve(process.cwd(), ".env"),
+    path.resolve(__dirname, ".env"),
+    path.resolve(__dirname, "../../.env")
+  ];
+  for (const envPath of envPaths) {
+    if (fs.existsSync(envPath)) {
+      const content = fs.readFileSync(envPath, "utf-8");
+      for (const line of content.split(/\r?\n/)) {
+        const trimmed = line.trim();
+        if (trimmed && !trimmed.startsWith("#") && trimmed.includes("=")) {
+          const idx = trimmed.indexOf("=");
+          const key = trimmed.slice(0, idx).trim();
+          const val = trimmed.slice(idx + 1).trim().replace(/(^["']|["']$)/g, "");
+          if (!process.env[key]) {
+            process.env[key] = val;
+          }
+        }
+      }
+      break;
+    }
+  }
+}
+loadEnvFile();
+
 if (!process.env.DATABASE_URL) {
   process.env.DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/script2scale?schema=public";
 }
