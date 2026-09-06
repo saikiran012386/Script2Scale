@@ -48,7 +48,7 @@ export function ActivityFeed({ activities }: ActivityFeedProps) {
           <CardTitle className="text-white text-lg font-bold">Recent System Activity</CardTitle>
           <p className="text-xs text-slate-400">Live operational audit trail across clients, inquiries, and projects.</p>
         </div>
-        <Badge variant="outline" className="text-emerald-400 border-emerald-500/30">
+        <Badge variant="outline" className="text-brand-yellow border-brand-yellow/30">
           LIVE AUDIT
         </Badge>
       </div>

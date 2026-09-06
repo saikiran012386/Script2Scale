@@ -62,7 +62,7 @@ export function VersionHistoryList({ versions, projectId }: VersionHistoryListPr
               key={v.id || v.versionNumber}
               className={`p-4 rounded-xl border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
                 isLatest
-                  ? "bg-slate-950 border-emerald-500/40 shadow-emerald-950/20"
+                  ? "bg-slate-950 border-brand-yellow/40 shadow-brand-yellow/10"
                   : "bg-slate-950/40 border-slate-800/80 opacity-80 hover:opacity-100"
               }`}
             >
@@ -70,7 +70,7 @@ export function VersionHistoryList({ versions, projectId }: VersionHistoryListPr
                 <div
                   className={`h-9 w-9 rounded-lg flex-shrink-0 flex items-center justify-center font-mono font-bold text-sm ${
                     isLatest
-                      ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
+                      ? "bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/40"
                       : "bg-slate-900 text-slate-400 border border-slate-800"
                   }`}
                 >
@@ -80,7 +80,7 @@ export function VersionHistoryList({ versions, projectId }: VersionHistoryListPr
                   <div className="flex items-center gap-2">
                     <h4 className="text-sm font-semibold text-white">{v.title}</h4>
                     {isLatest && (
-                      <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30">
                         Latest
                       </span>
                     )}
@@ -113,7 +113,7 @@ export function VersionHistoryList({ versions, projectId }: VersionHistoryListPr
                     href={`/projects/${projectId}/review?v=${v.versionNumber}`}
                     className={`px-3 py-1.5 rounded-lg text-xs font-semibold font-mono transition-all ${
                       isLatest
-                        ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-md"
+                        ? "bg-brand-orange hover:bg-brand-orange-dark text-white shadow-md"
                         : "bg-slate-800 hover:bg-slate-700 text-slate-200"
                     }`}
                   >

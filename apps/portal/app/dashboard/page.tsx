@@ -33,7 +33,7 @@ export default function ClientDashboardPage() {
     <div className="space-y-10 animate-fade-in max-w-6xl mx-auto">
       {/* Personalized Header & Subtitle */}
       <div className="border-b border-slate-800 pb-8 space-y-2">
-        <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block">
+        <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block">
           CLIENT PORTAL WORKSPACE
         </span>
         <h1 className="text-4xl font-extrabold text-white tracking-tight uppercase">
@@ -53,7 +53,7 @@ export default function ClientDashboardPage() {
             YOUR PROJECTS <span className="text-xs font-mono font-normal text-slate-500">({projects.length})</span>
           </h2>
           {projects.length > 0 && (
-            <span className="text-xs font-mono text-emerald-400">
+            <span className="text-xs font-mono text-brand-yellow">
               ● Live Real-Time Status Scoped
             </span>
           )}
@@ -62,7 +62,7 @@ export default function ClientDashboardPage() {
         {projects.length === 0 ? (
           /* Clean Empty State */
           <Card variant="bordered" className="p-12 text-center max-w-lg mx-auto bg-slate-900/80 border-slate-800 space-y-4">
-            <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto text-emerald-400 font-mono text-lg">
+            <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto text-brand-yellow font-mono text-lg">
               🚀
             </div>
             <CardTitle className="text-xl text-white font-bold">No Active Projects Yet</CardTitle>
@@ -87,12 +87,12 @@ export default function ClientDashboardPage() {
                   <div className="flex justify-between items-start gap-4">
                     <div className="space-y-1">
                       <a href={`/projects/${proj.id}`} className="group block">
-                        <CardTitle className="text-lg text-white group-hover:text-emerald-400 transition-colors font-bold">
+                        <CardTitle className="text-lg text-white group-hover:text-brand-yellow transition-colors font-bold">
                           {proj.name}
                         </CardTitle>
                       </a>
                       {proj.serviceType && (
-                        <span className="text-xs font-mono text-emerald-400 block">
+                        <span className="text-xs font-mono text-brand-yellow block">
                           {proj.serviceType}
                         </span>
                       )}
@@ -131,7 +131,7 @@ export default function ClientDashboardPage() {
                     </a>
                   ) : (
                     <a href={`/projects/${proj.id}`} className="flex-1">
-                      <Button variant="outline" size="sm" className="w-full text-xs font-mono text-emerald-400 border-emerald-500/60 hover:bg-emerald-950/40">
+                      <Button variant="outline" size="sm" className="w-full text-xs font-mono text-brand-yellow border-brand-yellow/60 hover:bg-brand-yellow/10">
                         OPEN WORKSPACE →
                       </Button>
                     </a>

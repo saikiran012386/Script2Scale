@@ -94,11 +94,11 @@ export default function CMSPortfolioPage() {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
             PORTFOLIO CMS & CASE STUDY MANAGEMENT
           </span>
           <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-            PORTFOLIO <span className="text-emerald-500 font-mono">/</span> SHOWCASE.
+            PORTFOLIO <span className="text-brand-yellow font-mono">/</span> SHOWCASE.
           </h1>
           <p className="text-sm text-slate-400">
             Publish and curate public portfolio projects, thumbnail art, video reels, and homepage featured highlights.
@@ -120,7 +120,7 @@ export default function CMSPortfolioPage() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -139,7 +139,7 @@ export default function CMSPortfolioPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by title, client, or category..."
-            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
           />
         </div>
 
@@ -152,7 +152,7 @@ export default function CMSPortfolioPage() {
               onClick={() => setFilter(tab)}
               className={`px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider transition-colors ${
                 filter === tab
-                  ? "bg-emerald-500 text-slate-950 font-bold"
+                  ? "bg-brand-yellow text-brand-black font-bold"
                   : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
               }`}
             >
@@ -196,11 +196,11 @@ export default function CMSPortfolioPage() {
                 <div>
                   <button
                     onClick={() => handleOpenEditModal(p)}
-                    className="font-bold text-white hover:text-emerald-400 transition-colors text-left"
+                    className="font-bold text-white hover:text-brand-yellow transition-colors text-left"
                   >
                     {p.title}
                   </button>
-                  <p className="text-xs text-emerald-400 font-mono">{p.categoryLabel}</p>
+                  <p className="text-xs text-brand-yellow font-mono">{p.categoryLabel}</p>
                 </div>
               )
             },
@@ -238,7 +238,7 @@ export default function CMSPortfolioPage() {
                     className={`px-2 py-1 rounded text-[10px] font-mono font-bold border transition-colors ${
                       p.isPublished
                         ? "bg-slate-900 border-slate-700 text-slate-300 hover:text-white"
-                        : "bg-emerald-950 border-emerald-600 text-emerald-400 hover:bg-emerald-900"
+                        : "bg-brand-yellow/20 border-brand-yellow text-brand-yellow hover:bg-brand-yellow/30"
                     }`}
                   >
                     {p.isPublished ? "Set Draft" : "Publish"}
@@ -249,7 +249,7 @@ export default function CMSPortfolioPage() {
                     onClick={() => handleToggleFeatured(p.id)}
                     className={`px-2 py-1 rounded text-[10px] font-mono font-bold border transition-colors ${
                       p.isFeatured
-                        ? "bg-amber-950 border-amber-600 text-amber-300"
+                        ? "bg-brand-orange/20 border-brand-orange text-brand-orange"
                         : "bg-slate-900 border-slate-800 text-slate-400 hover:text-white"
                     }`}
                   >
@@ -264,7 +264,7 @@ export default function CMSPortfolioPage() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => handleOpenEditModal(p)}
-                    className="text-xs font-mono font-bold text-emerald-400 hover:underline"
+                    className="text-xs font-mono font-bold text-brand-yellow hover:underline"
                   >
                     EDIT
                   </button>

@@ -23,7 +23,7 @@ export function SelectedWorkGrid() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-8">
         <div>
           <Display size="xl" className="tracking-tighter">
-            SELECTED <span className="text-emerald-500 font-mono">/</span> WORK
+            SELECTED <span className="text-brand-orange font-mono">/</span> WORK
           </Display>
           <Body size="md" muted className="mt-2 max-w-xl">
             A curated showcase of commercial films, 3D motion graphics, and high-retention video systems built for industry leaders.
@@ -38,7 +38,7 @@ export function SelectedWorkGrid() {
               onClick={() => setActiveCategory(cat)}
               className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors border ${
                 activeCategory === cat
-                  ? "bg-emerald-600 text-white border-emerald-500 font-bold"
+                  ? "bg-brand-orange text-white border-brand-orange font-bold"
                   : "bg-surface-100 text-slate-400 border-slate-800 hover:text-white"
               }`}
             >

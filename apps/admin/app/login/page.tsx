@@ -38,11 +38,11 @@ export default function AdminLoginPage() {
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-6">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
-          <Label uppercase mono size="xs" className="text-emerald-400">
+          <Label uppercase mono size="xs" className="text-brand-yellow">
             INTERNAL ADMIN SYSTEM
           </Label>
           <Display size="2xl" className="tracking-tighter uppercase text-white">
-            ADMIN <span className="text-emerald-500 font-mono">/</span> LOGIN.
+            ADMIN <span className="text-brand-yellow font-mono">/</span> LOGIN.
           </Display>
           <p className="text-xs text-slate-400">
             Authorized Owner & CMS Management Gateway.
@@ -61,7 +61,7 @@ export default function AdminLoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
               />
             </div>
 
@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
               />
             </div>
 

@@ -46,11 +46,11 @@ export default function CMSSettingsPage() {
     <div className="space-y-6 animate-fade-in max-w-5xl">
       {/* Header */}
       <div className="border-b border-slate-800 pb-6">
-        <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+        <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
           GLOBAL PLATFORM CONFIGURATION
         </span>
         <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-          GLOBAL <span className="text-emerald-500 font-mono">/</span> SETTINGS & FOOTER.
+          GLOBAL <span className="text-brand-yellow font-mono">/</span> SETTINGS & FOOTER.
         </h1>
         <p className="text-sm text-slate-400">
           Manage contact channels, notification emails, social media profile URLs, and global footer metadata across public website apps.
@@ -62,7 +62,7 @@ export default function CMSSettingsPage() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -77,7 +77,7 @@ export default function CMSSettingsPage() {
         {/* Section 1: Contact & Notifications */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">01.</span> Contact Channels & Email Alerts
+            <span className="text-brand-yellow font-mono">01.</span> Contact Channels & Email Alerts
           </h2>
 
           <div className="grid grid-cols-2 gap-4">
@@ -90,7 +90,7 @@ export default function CMSSettingsPage() {
                 name="contactEmail"
                 type="email"
                 defaultValue={settings.contactEmail}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-mono"
               />
             </div>
 
@@ -103,7 +103,7 @@ export default function CMSSettingsPage() {
                 name="notificationEmail"
                 type="email"
                 defaultValue={settings.notificationEmail}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-mono"
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function CMSSettingsPage() {
                 name="phone"
                 type="text"
                 defaultValue={settings.phone}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-mono"
               />
             </div>
 
@@ -131,7 +131,7 @@ export default function CMSSettingsPage() {
                 name="address"
                 type="text"
                 defaultValue={settings.address}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function CMSSettingsPage() {
         {/* Section 2: Social Media Handles */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">02.</span> Social Media Links
+            <span className="text-brand-yellow font-mono">02.</span> Social Media Links
           </h2>
 
           <div className="grid grid-cols-2 gap-4">
@@ -153,7 +153,7 @@ export default function CMSSettingsPage() {
                 name="instagramUrl"
                 type="text"
                 defaultValue={settings.instagramUrl}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -166,7 +166,7 @@ export default function CMSSettingsPage() {
                 name="twitterUrl"
                 type="text"
                 defaultValue={settings.twitterUrl}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function CMSSettingsPage() {
                 name="youtubeUrl"
                 type="text"
                 defaultValue={settings.youtubeUrl}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -194,7 +194,7 @@ export default function CMSSettingsPage() {
                 name="linkedinUrl"
                 type="text"
                 defaultValue={settings.linkedinUrl}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function CMSSettingsPage() {
         {/* Section 3: Footer Brand Copy & Copyright */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">03.</span> Footer Copy & Legal Metadata
+            <span className="text-brand-yellow font-mono">03.</span> Footer Copy & Legal Metadata
           </h2>
 
           <div>
@@ -215,7 +215,7 @@ export default function CMSSettingsPage() {
               name="footerBlurb"
               rows={2}
               defaultValue={settings.footerBlurb}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -228,7 +228,7 @@ export default function CMSSettingsPage() {
               name="copyrightText"
               type="text"
               defaultValue={settings.copyrightText}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
         </Card>

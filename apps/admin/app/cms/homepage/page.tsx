@@ -46,11 +46,11 @@ export default function CMSHomepageEditor() {
     <div className="space-y-6 animate-fade-in max-w-5xl">
       {/* Header */}
       <div className="border-b border-slate-800 pb-6">
-        <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+        <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
           WEBSITE CONTENT MANAGEMENT
         </span>
         <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-          HOMEPAGE <span className="text-emerald-500 font-mono">/</span> HERO & COPY.
+          HOMEPAGE <span className="text-brand-yellow font-mono">/</span> HERO & COPY.
         </h1>
         <p className="text-sm text-slate-400">
           Edit public marketing copy for the homepage hero section, call-to-action buttons, and Selected Work showcase header.
@@ -62,7 +62,7 @@ export default function CMSHomepageEditor() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -77,7 +77,7 @@ export default function CMSHomepageEditor() {
         {/* Section 1: Hero Header & Copy */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">01.</span> Hero Section Copy
+            <span className="text-brand-yellow font-mono">01.</span> Hero Section Copy
           </h2>
 
           <div>
@@ -89,7 +89,7 @@ export default function CMSHomepageEditor() {
               name="heroBadge"
               type="text"
               defaultValue={data.heroBadge}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-mono"
             />
           </div>
 
@@ -103,7 +103,7 @@ export default function CMSHomepageEditor() {
                 name="heroTitleLine1"
                 type="text"
                 defaultValue={data.heroTitleLine1}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-bold"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-bold"
               />
             </div>
 
@@ -116,7 +116,7 @@ export default function CMSHomepageEditor() {
                 name="heroTitleLine2"
                 type="text"
                 defaultValue={data.heroTitleLine2}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 font-bold"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-brand-yellow focus:outline-none focus:ring-2 focus:ring-brand-yellow font-bold"
               />
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function CMSHomepageEditor() {
               name="heroSubtitle"
               rows={3}
               defaultValue={data.heroSubtitle}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
         </Card>
@@ -138,7 +138,7 @@ export default function CMSHomepageEditor() {
         {/* Section 2: Call-to-Action Buttons */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">02.</span> Action Buttons & Links
+            <span className="text-brand-yellow font-mono">02.</span> Action Buttons & Links
           </h2>
 
           <div className="grid grid-cols-2 gap-4">
@@ -151,7 +151,7 @@ export default function CMSHomepageEditor() {
                 name="heroPrimaryCtaText"
                 type="text"
                 defaultValue={data.heroPrimaryCtaText}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -179,7 +179,7 @@ export default function CMSHomepageEditor() {
                 name="heroSecondaryCtaText"
                 type="text"
                 defaultValue={data.heroSecondaryCtaText}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -201,7 +201,7 @@ export default function CMSHomepageEditor() {
         {/* Section 3: Selected Work & Media Asset */}
         <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-6">
           <h2 className="text-base font-bold text-white uppercase tracking-tight flex items-center gap-2">
-            <span className="text-emerald-500 font-mono">03.</span> Showcase & Media Reels
+            <span className="text-brand-yellow font-mono">03.</span> Showcase & Media Reels
           </h2>
 
           <div className="grid grid-cols-2 gap-4">
@@ -214,7 +214,7 @@ export default function CMSHomepageEditor() {
                 name="selectedWorkTitle"
                 type="text"
                 defaultValue={data.selectedWorkTitle}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-bold"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-bold"
               />
             </div>
 
@@ -241,7 +241,7 @@ export default function CMSHomepageEditor() {
               name="selectedWorkSubtitle"
               rows={2}
               defaultValue={data.selectedWorkSubtitle}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
         </Card>

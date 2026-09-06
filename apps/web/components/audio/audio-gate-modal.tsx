@@ -12,7 +12,7 @@ export function AudioGateModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-6">
       <div className="max-w-md w-full text-center space-y-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl animate-fade-in">
-        <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block">
+        <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block">
           Audio Experience Gate
         </span>
         <Display size="md">Script2Scale Studio</Display>

@@ -30,11 +30,11 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
           <span className="text-xs text-slate-400 font-mono">Progress</span>
           <div className="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 transition-all duration-500"
+              className="h-full bg-gradient-to-r from-brand-yellow to-brand-orange transition-all duration-500"
               style={{ width: `${percentComplete}%` }}
             />
           </div>
-          <span className="text-xs font-bold text-emerald-400 font-mono">
+          <span className="text-xs font-bold text-brand-yellow font-mono">
             {percentComplete}%
           </span>
         </div>
@@ -45,7 +45,7 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
         {/* Connection Line */}
         <div className="absolute top-5 left-6 right-6 h-0.5 bg-slate-800 -z-0" />
         <div
-          className="absolute top-5 left-6 h-0.5 bg-emerald-500/60 transition-all duration-500 -z-0"
+          className="absolute top-5 left-6 h-0.5 bg-brand-yellow/60 transition-all duration-500 -z-0"
           style={{
             width: `${Math.max(0, Math.min(100, ((activeTimeline.activeStepIndex - 1) / 5) * 100))}%`
           }}
@@ -61,14 +61,14 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
                 <div
                   className={`h-10 w-10 rounded-full flex items-center justify-center text-xs font-mono font-bold transition-all shadow-md ${
                     isCompleted
-                      ? "bg-emerald-600 text-white border border-emerald-400 shadow-emerald-950"
+                      ? "bg-brand-yellow text-brand-black border border-brand-yellow/40 shadow-brand-yellow/10"
                       : isCurrent
-                      ? "bg-emerald-500/20 text-emerald-400 border-2 border-emerald-400 animate-pulse shadow-emerald-500/20"
+                      ? "bg-brand-yellow/20 text-brand-yellow border-2 border-brand-yellow animate-pulse shadow-brand-yellow/20"
                       : "bg-slate-950 text-slate-500 border border-slate-800"
                   }`}
                 >
                   {isCompleted ? (
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-brand-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   ) : (
@@ -78,7 +78,7 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
                 <span
                   className={`text-xs font-semibold mt-3 ${
                     isCurrent
-                      ? "text-emerald-400"
+                      ? "text-brand-yellow"
                       : isCompleted
                       ? "text-slate-200"
                       : "text-slate-500"
@@ -106,16 +106,16 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
               {idx < steps.length - 1 && (
                 <div
                   className={`absolute left-4 top-8 bottom-0 w-0.5 ${
-                    isCompleted ? "bg-emerald-600" : "bg-slate-800"
+                    isCompleted ? "bg-brand-yellow" : "bg-slate-800"
                   }`}
                 />
               )}
               <div
                 className={`h-8 w-8 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-mono font-bold transition-all z-10 ${
                   isCompleted
-                    ? "bg-emerald-600 text-white"
+                    ? "bg-brand-yellow text-brand-black"
                     : isCurrent
-                    ? "bg-emerald-500/20 text-emerald-400 border-2 border-emerald-400 animate-pulse"
+                    ? "bg-brand-yellow/20 text-brand-yellow border-2 border-brand-yellow animate-pulse"
                     : "bg-slate-950 text-slate-500 border border-slate-800"
                 }`}
               >
@@ -126,7 +126,7 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
                   <h4
                     className={`text-sm font-semibold ${
                       isCurrent
-                        ? "text-emerald-400"
+                        ? "text-brand-yellow"
                         : isCompleted
                         ? "text-slate-200"
                         : "text-slate-500"
@@ -135,7 +135,7 @@ export function ProjectTimeline({ timeline, projectStatus }: ProjectTimelineProp
                     {step.label}
                   </h4>
                   {isCurrent && (
-                    <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/30">
                       In Progress
                     </span>
                   )}

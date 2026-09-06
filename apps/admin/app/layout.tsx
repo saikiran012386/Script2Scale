@@ -13,7 +13,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <aside className="w-64 border-r border-slate-800 bg-slate-900/60 p-6 flex flex-col justify-between hidden md:flex">
           <div>
             <div className="flex items-center gap-2 mb-8">
-              <span className="text-xl font-bold tracking-tight text-white">S2S<span className="text-emerald-500">.ADMIN</span></span>
+              <span className="text-xl font-bold tracking-tight text-white">S2S<span className="text-brand-yellow">.ADMIN</span></span>
             </div>
             <nav className="space-y-1 text-sm font-medium text-slate-300">
               <a href="/dashboard" className="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition-colors">Dashboard</a>
@@ -36,7 +36,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <header className="h-16 border-b border-slate-800 bg-slate-900/40 px-6 flex items-center justify-between">
             <h2 className="text-sm font-medium text-slate-400">Admin Control Center</h2>
             <div className="flex items-center gap-3">
-              <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+              <span className="h-2 w-2 rounded-full bg-brand-yellow"></span>
               <span className="text-xs font-mono text-slate-300">Owner Session Active</span>
             </div>
           </header>

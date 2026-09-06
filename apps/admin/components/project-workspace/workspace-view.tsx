@@ -87,7 +87,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
   if (!data || !data.project) {
     return (
       <div className="space-y-6">
-        <a href="/projects" className="text-xs font-mono text-emerald-400 hover:underline">
+        <a href="/projects" className="text-xs font-mono text-brand-yellow hover:underline">
           ← BACK TO PROJECTS DIRECTORY
         </a>
         <div className="p-12 border border-slate-800 rounded-2xl bg-slate-900 text-center space-y-3">
@@ -106,7 +106,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
       {/* Top Breadcrumb & Actions */}
       <div className="space-y-4 border-b border-slate-800 pb-6">
         <div className="flex items-center justify-between">
-          <a href="/projects" className="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+          <a href="/projects" className="text-xs font-mono text-slate-400 hover:text-brand-yellow transition-colors">
             ← BACK TO PROJECTS PIPELINE
           </a>
           <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">
@@ -124,7 +124,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
                 {project.status}
               </Badge>
               {project.serviceType && (
-                <Badge variant="outline" className="text-xs font-mono text-emerald-400 border-emerald-500/30">
+                <Badge variant="outline" className="text-xs font-mono text-brand-yellow border-brand-yellow/30">
                   {project.serviceType}
                 </Badge>
               )}
@@ -132,7 +132,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
 
             <p className="text-xs font-mono text-slate-400">
               Assigned Client:{" "}
-              <a href={`/clients/${client.id}`} className="text-emerald-400 hover:underline font-bold">
+              <a href={`/clients/${client.id}`} className="text-brand-yellow hover:underline font-bold">
                 {client.companyName || client.name}
               </a>
             </p>
@@ -145,7 +145,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
               disabled={isPending}
               value={project.status}
               onChange={(e) => handleStatusUpdate(e.target.value)}
-              className="bg-slate-900 border border-slate-700 text-xs font-mono text-white rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="bg-slate-900 border border-slate-700 text-xs font-mono text-white rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             >
               {MILESTONES.map((st) => (
                 <option key={st} value={st}>
@@ -162,7 +162,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -181,7 +181,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors border-b-2 whitespace-nowrap ${
               activeTab === tab.id
-                ? "border-emerald-500 text-emerald-400 font-bold"
+                ? "border-brand-yellow text-brand-yellow font-bold"
                 : "border-transparent text-slate-400 hover:text-white"
             }`}
           >
@@ -199,7 +199,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
               <CardTitle className="text-xs font-mono text-slate-400 uppercase tracking-wider">
                 PRODUCTION MILESTONE PROGRESS
               </CardTitle>
-              <span className="text-xs font-mono text-emerald-400">
+              <span className="text-xs font-mono text-brand-yellow">
                 Step {currentMilestoneIndex + 1} of {MILESTONES.length}
               </span>
             </div>
@@ -209,13 +209,13 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
                 <div key={st} className="space-y-1.5 text-center">
                   <div
                     className={`h-2 rounded-full transition-colors ${
-                      idx <= currentMilestoneIndex ? "bg-emerald-500" : "bg-slate-800"
+                      idx <= currentMilestoneIndex ? "bg-brand-yellow" : "bg-slate-800"
                     }`}
                   />
                   <span
                     className={`text-[9px] font-mono block uppercase ${
                       idx === currentMilestoneIndex
-                        ? "text-emerald-400 font-bold"
+                        ? "text-brand-yellow font-bold"
                         : idx < currentMilestoneIndex
                         ? "text-slate-300"
                         : "text-slate-600"
@@ -299,7 +299,7 @@ export function ProjectWorkspaceView({ projectId }: ProjectWorkspaceViewProps) {
       {/* Feedback Placeholder (Prompt 23) */}
       {activeTab === "feedback" && (
         <Card variant="bordered" className="p-12 bg-slate-900/60 border-slate-800 text-center space-y-4">
-          <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto text-emerald-400 font-mono text-xl">
+          <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto text-brand-yellow font-mono text-xl">
             💬
           </div>
           <div className="space-y-1">

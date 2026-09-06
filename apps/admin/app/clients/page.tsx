@@ -71,11 +71,11 @@ export default function ClientsDirectoryPage() {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
             CLIENT WORKSPACE DIRECTORY
           </span>
           <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-            CLIENTS <span className="text-emerald-500 font-mono">/</span> OVERVIEW.
+            CLIENTS <span className="text-brand-yellow font-mono">/</span> OVERVIEW.
           </h1>
           <p className="text-sm text-slate-400">
             Manage partner accounts, portal activation invitations, and access permissions.
@@ -97,7 +97,7 @@ export default function ClientsDirectoryPage() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             actionNotice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -117,7 +117,7 @@ export default function ClientsDirectoryPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by name, company, or email..."
-            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
           />
         </div>
 
@@ -130,7 +130,7 @@ export default function ClientsDirectoryPage() {
               onClick={() => setStatusFilter(tab)}
               className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-colors ${
                 statusFilter === tab
-                  ? "bg-emerald-500 text-slate-950 font-bold"
+                  ? "bg-brand-yellow text-brand-black font-bold"
                   : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
               }`}
             >
@@ -153,7 +153,7 @@ export default function ClientsDirectoryPage() {
               header: "Client / Company",
               accessorKey: (c) => (
                 <div>
-                  <a href={`/clients/${c.id}`} className="font-bold text-white hover:text-emerald-400 transition-colors">
+                  <a href={`/clients/${c.id}`} className="font-bold text-white hover:text-brand-yellow transition-colors">
                     {c.companyName || c.name}
                   </a>
                   {c.companyName && <p className="text-xs text-slate-400 font-mono">Contact: {c.name}</p>}
@@ -168,7 +168,7 @@ export default function ClientsDirectoryPage() {
               header: "Projects",
               accessorKey: (c) => (
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline" className="text-xs font-mono text-emerald-400 border-emerald-500/30">
+                  <Badge variant="outline" className="text-xs font-mono text-brand-yellow border-brand-yellow/30">
                     {c.activeProjectsCount} Active
                   </Badge>
                   <span className="text-xs text-slate-500 font-mono">({c.projectsCount} Total)</span>
@@ -190,14 +190,14 @@ export default function ClientsDirectoryPage() {
               header: "Actions",
               accessorKey: (c) => (
                 <div className="flex items-center gap-3">
-                  <a href={`/clients/${c.id}`} className="text-xs font-mono font-bold text-emerald-400 hover:underline">
+                  <a href={`/clients/${c.id}`} className="text-xs font-mono font-bold text-brand-yellow hover:underline">
                     VIEW →
                   </a>
                   <button
                     disabled={isPending}
                     onClick={() => handleToggleStatus(c)}
                     className={`text-xs font-mono underline hover:text-white transition-colors ${
-                      c.status === "ACTIVE" ? "text-amber-400" : "text-emerald-400"
+                      c.status === "ACTIVE" ? "text-brand-orange" : "text-brand-yellow"
                     }`}
                   >
                     {c.status === "ACTIVE" ? "DISABLE" : "ENABLE"}

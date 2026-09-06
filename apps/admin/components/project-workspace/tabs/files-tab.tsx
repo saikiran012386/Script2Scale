@@ -134,9 +134,9 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
         </div>
       )}
       {successMessage && (
-        <div className="p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-xs font-mono flex justify-between items-center">
+        <div className="p-4 rounded-xl bg-brand-yellow/10 border border-brand-yellow/40 text-brand-yellow text-xs font-mono flex justify-between items-center">
           <span>✓ {successMessage}</span>
-          <button onClick={() => setSuccessMessage(null)} className="text-emerald-400 hover:text-white">✕</button>
+          <button onClick={() => setSuccessMessage(null)} className="text-brand-yellow hover:text-white">✕</button>
         </div>
       )}
 
@@ -157,7 +157,7 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
             <select
               value={selectedUploadCategory}
               onChange={(e) => setSelectedUploadCategory(e.target.value as FileCategory)}
-              className="bg-slate-950 border border-slate-700 text-slate-200 text-xs font-mono rounded-lg px-3 py-1.5 focus:outline-none focus:border-emerald-500"
+              className="bg-slate-950 border border-slate-700 text-slate-200 text-xs font-mono rounded-lg px-3 py-1.5 focus:outline-none focus:border-brand-yellow"
             >
               <option value="DELIVERABLES">Deliverables / Output</option>
               <option value="RAW_FOOTAGE">Raw Footage</option>
@@ -167,12 +167,12 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
           </div>
         </div>
 
-        <label className="border-2 border-dashed border-slate-800 hover:border-emerald-500/60 transition-all rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer bg-slate-950/50 hover:bg-slate-950/80 group">
+        <label className="border-2 border-dashed border-slate-800 hover:border-brand-yellow/60 transition-all rounded-xl p-6 flex flex-col items-center justify-center text-center cursor-pointer bg-slate-950/50 hover:bg-slate-950/80 group">
           <input type="file" onChange={handleAdminFileUpload} disabled={uploading} className="hidden" />
-          <div className="h-10 w-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-lg mb-2 text-slate-400 group-hover:text-emerald-400 transition-colors">
+          <div className="h-10 w-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-lg mb-2 text-slate-400 group-hover:text-brand-yellow transition-colors">
             {uploading ? "⏳" : "⚡"}
           </div>
-          <span className="text-xs font-semibold text-white group-hover:text-emerald-400 transition-colors font-mono">
+          <span className="text-xs font-semibold text-white group-hover:text-brand-yellow transition-colors font-mono">
             {uploading ? "Uploading file..." : `Upload file as ${selectedUploadCategory.replace("_", " ")}`}
           </span>
           <span className="text-[11px] text-slate-500 font-mono mt-1">Max upload limit: 500MB</span>
@@ -196,12 +196,12 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
               onClick={() => setActiveCategory(tab.id)}
               className={`px-3 py-1.5 rounded-lg border transition-all flex items-center gap-2 ${
                 active
-                  ? "bg-emerald-950/80 border-emerald-500 text-emerald-400 font-bold"
+                  ? "bg-brand-yellow/10 border-brand-yellow text-brand-yellow font-bold"
                   : "bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200"
               }`}
             >
               <span>{tab.label}</span>
-              <span className={`px-1.5 py-0.2 rounded text-[10px] ${active ? "bg-emerald-500/20 text-emerald-300" : "bg-slate-800 text-slate-400"}`}>
+              <span className={`px-1.5 py-0.2 rounded text-[10px] ${active ? "bg-brand-yellow/20 text-brand-yellow" : "bg-slate-800 text-slate-400"}`}>
                 {count}
               </span>
             </button>
@@ -237,7 +237,7 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
                       <span>•</span>
                       <span>Uploaded {new Date(file.createdAt).toLocaleDateString()}</span>
                       <span>•</span>
-                      <span className={isClient ? "text-emerald-400" : "text-amber-400 font-bold"}>
+                      <span className={isClient ? "text-brand-yellow" : "text-brand-orange font-bold"}>
                         {isClient ? "Client Upload" : "⚡ Agency Output"}
                       </span>
                     </div>
@@ -249,7 +249,7 @@ export function AdminFilesTab({ projectId }: AdminFilesTabProps) {
                     href={file.fileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors"
+                    className="px-3 py-1.5 rounded-lg bg-brand-orange hover:bg-brand-orange-light text-white font-bold transition-colors"
                   >
                     Download ↓
                   </a>

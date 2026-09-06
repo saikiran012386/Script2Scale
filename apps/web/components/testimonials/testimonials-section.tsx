@@ -47,12 +47,12 @@ export function TestimonialsSection() {
     <section ref={ref} className="py-28 md:py-36 px-6 max-w-7xl mx-auto border-b border-slate-800/80 space-y-12">
       {/* Section Header */}
       <div className="border-b border-slate-800 pb-8">
-        <Label uppercase mono size="xs" className="text-emerald-400 block mb-2">Testimonials</Label>
+        <Label uppercase mono size="xs" className="text-brand-yellow block mb-2">Testimonials</Label>
         <Display size="xl" className="tracking-tighter">
-          CLIENT <span className="text-emerald-500 font-mono">/</span> FEEDBACK.
+          CLIENT <span className="text-brand-orange font-mono">/</span> FEEDBACK.
         </Display>
         <Body size="md" muted className="mt-2 max-w-xl">
-          What founders and marketing leaders say about partnering with Script2Scale.
+          What founders, YouTube creators, and brand directors say about our post-production systems.
         </Body>
       </div>
 
@@ -68,7 +68,7 @@ export function TestimonialsSection() {
           >
             <Card variant="bordered" className="h-full flex flex-col justify-between p-8 bg-surface-100/90 border-slate-800 hover:border-slate-700">
               <CardContent className="p-0 space-y-6">
-                <span className="text-xs font-mono text-emerald-400 uppercase tracking-wider block">
+                <span className="text-xs font-mono text-brand-yellow uppercase tracking-wider block">
                   [{t.projectTag}]
                 </span>
                 <p className="text-lg text-slate-200 leading-relaxed font-sans italic">

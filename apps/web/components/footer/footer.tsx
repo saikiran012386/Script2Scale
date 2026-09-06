@@ -54,8 +54,8 @@ export function Footer({
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <a href="/" className="inline-block group">
-              <span className="text-2xl font-extrabold tracking-tighter text-white font-display group-hover:text-emerald-400 transition-colors">
-                SCRIPT<span className="text-emerald-500 font-mono">2</span>SCALE
+              <span className="text-2xl font-extrabold tracking-tighter text-white font-display group-hover:text-brand-yellow transition-colors">
+                SCRIPT<span className="text-brand-orange font-mono">2</span>SCALE
               </span>
             </a>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm font-sans">
@@ -64,7 +64,7 @@ export function Footer({
             <div className="pt-2">
               <a
                 href="/start-a-project"
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-yellow hover:text-brand-orange transition-colors"
               >
                 <span>BOOK A PRODUCTION ROADMAP</span>
                 <span>→</span>
@@ -74,7 +74,7 @@ export function Footer({
 
           {/* Nav Links Column */}
           <div className="md:col-span-2 space-y-3">
-            <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+            <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
               NAVIGATION
             </Label>
             <ul className="space-y-2 text-xs font-mono">
@@ -90,7 +90,7 @@ export function Footer({
 
           {/* Services Column */}
           <div className="md:col-span-3 space-y-3">
-            <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+            <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
               SERVICES OFFERED
             </Label>
             <ul className="space-y-2 text-xs font-mono">
@@ -106,7 +106,7 @@ export function Footer({
 
           {/* Legal & Portal Column */}
           <div className="md:col-span-2 space-y-3">
-            <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+            <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
               CLIENT & LEGAL
             </Label>
             <ul className="space-y-2 text-xs font-mono">

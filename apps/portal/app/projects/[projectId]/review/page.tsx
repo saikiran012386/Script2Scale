@@ -25,15 +25,15 @@ export default async function VideoReviewPage({
       {/* Top Header & Breadcrumbs */}
       <div>
         <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Dashboard
           </a>
           <span>/</span>
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Projects
           </a>
           <span>/</span>
-          <a href={`/projects/${project.id}`} className="hover:text-emerald-400 transition-colors truncate">
+          <a href={`/projects/${project.id}`} className="hover:text-brand-yellow transition-colors truncate">
             {project.name}
           </a>
           <span>/</span>
@@ -63,7 +63,7 @@ export default async function VideoReviewPage({
           <div>
             <a
               href={`/projects/${project.id}/approval`}
-              className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm font-mono shadow-lg shadow-emerald-950/40 transition-all inline-flex items-center gap-2"
+              className="px-5 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold text-sm font-mono shadow-lg shadow-brand-orange/20 transition-all inline-flex items-center gap-2"
             >
               <span>{isApproved ? "View Final Sign-Off ✓" : "Approve Cut & Finalize →"}</span>
             </a>
@@ -88,7 +88,7 @@ export default async function VideoReviewPage({
           </a>
           <a
             href={`/projects/${project.id}/review`}
-            className="border-b-2 border-emerald-400 py-3 text-emerald-400 font-bold flex items-center gap-2"
+            className="border-b-2 border-brand-yellow py-3 text-brand-yellow font-bold flex items-center gap-2"
           >
             <span>Video Review</span>
           </a>

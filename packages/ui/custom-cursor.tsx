@@ -45,8 +45,8 @@ export function CustomCursor({ dotClassName = "", ringClassName = "" }: CustomCu
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden hidden md:block">
       {/* Outer Ring */}
       <div
-        className={`fixed h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-400/60 bg-emerald-500/10 transition-transform duration-100 ease-out ${
-          isHovered ? "scale-150 border-emerald-300 bg-emerald-400/20" : "scale-100"
+        className={`fixed h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-yellow/60 bg-brand-yellow/10 transition-transform duration-100 ease-out ${
+          isHovered ? "scale-150 border-brand-orange bg-brand-orange/20" : "scale-100"
         } ${ringClassName}`}
         style={{
           transform: `translate3d(${pos.x}px, ${pos.y}px, 0) scale(${isHovered ? 1.5 : 1})`
@@ -54,7 +54,7 @@ export function CustomCursor({ dotClassName = "", ringClassName = "" }: CustomCu
       />
       {/* Inner Dot */}
       <div
-        className={`fixed h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400 ${dotClassName}`}
+        className={`fixed h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-yellow ${dotClassName}`}
         style={{
           transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`
         }}

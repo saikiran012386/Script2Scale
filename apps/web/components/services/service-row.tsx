@@ -53,7 +53,7 @@ export function ServiceRow({ service, index, onHoverStart, onHoverEnd }: Service
       ref={rowRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative border-b border-slate-800 transition-colors hover:border-emerald-500/50"
+      className="group relative border-b border-slate-800 transition-colors hover:border-brand-yellow/50"
     >
       <a
         href={`/services/${service.slug}`}
@@ -62,11 +62,11 @@ export function ServiceRow({ service, index, onHoverStart, onHoverEnd }: Service
       >
         {/* Left Info */}
         <div className="flex items-start md:items-center gap-6">
-          <span className="font-mono text-xl font-bold text-emerald-500 group-hover:text-emerald-400 transition-colors">
+          <span className="font-mono text-xl font-bold text-brand-yellow group-hover:text-brand-yellow transition-colors">
             {indexStr}
           </span>
           <div>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-white group-hover:text-emerald-400 transition-colors tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-white group-hover:text-brand-yellow transition-colors tracking-tight">
               {service.name}
             </h3>
             <p className="text-sm text-slate-400 mt-1 max-w-xl group-hover:text-slate-300 transition-colors">
@@ -88,7 +88,7 @@ export function ServiceRow({ service, index, onHoverStart, onHoverEnd }: Service
             ))}
           </div>
 
-          <span className="text-2xl text-slate-600 group-hover:text-emerald-400 group-hover:translate-x-2 transition-all">
+          <span className="text-2xl text-slate-600 group-hover:text-brand-orange group-hover:translate-x-2 transition-all">
             →
           </span>
         </div>
@@ -115,7 +115,7 @@ export function ServiceRow({ service, index, onHoverStart, onHoverEnd }: Service
           )}
           <a
             href={`/services/${service.slug}`}
-            className="inline-block w-full text-center py-2 bg-emerald-600 text-white font-mono text-xs rounded-lg font-bold"
+            className="inline-block w-full text-center py-2 bg-brand-orange text-white font-mono text-xs rounded-lg font-bold"
           >
             VIEW SERVICE DETAILS →
           </a>

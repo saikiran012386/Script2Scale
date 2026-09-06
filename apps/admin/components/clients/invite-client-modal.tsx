@@ -54,18 +54,18 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
           <div
             className={`p-4 rounded-xl text-xs font-mono border space-y-2 ${
               result.success
-                ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+                ? "bg-brand-yellow/10 border-brand-yellow/40 text-brand-yellow"
                 : "bg-red-950/60 border-red-500/60 text-red-300"
             }`}
           >
             <p className="font-bold">{result.message}</p>
             {result.invitationUrl && (
-              <div className="pt-1 border-t border-emerald-800/40">
+              <div className="pt-1 border-t border-brand-yellow/30">
                 <span className="block text-[10px] text-slate-400 mb-1">ACTIVATION LINK:</span>
                 <input
                   readOnly
                   value={result.invitationUrl}
-                  className="w-full bg-slate-950 border border-emerald-900 rounded px-2 py-1 text-[11px] text-emerald-400 font-mono select-all focus:outline-none"
+                  className="w-full bg-slate-950 border border-brand-yellow/40 rounded px-2 py-1 text-[11px] text-brand-yellow font-mono select-all focus:outline-none"
                 />
               </div>
             )}
@@ -75,7 +75,7 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="invite-name" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              CONTACT NAME <span className="text-emerald-400">*</span>
+              CONTACT NAME <span className="text-brand-yellow">*</span>
             </label>
             <input
               id="invite-name"
@@ -85,7 +85,7 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Sarah Smith"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -100,13 +100,13 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
               placeholder="e.g. NeoTech Inc"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
           <div>
             <label htmlFor="invite-email" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              EMAIL ADDRESS <span className="text-emerald-400">*</span>
+              EMAIL ADDRESS <span className="text-brand-yellow">*</span>
             </label>
             <input
               id="invite-email"
@@ -116,7 +116,7 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="client@company.com"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -131,7 +131,7 @@ export function InviteClientModal({ isOpen, onClose, onSuccess }: InviteClientMo
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="+1 (555) 000-0000"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 

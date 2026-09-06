@@ -4,17 +4,10 @@ export const tailwindPreset = {
     extend: {
       colors: {
         brand: {
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          200: "#bbf7d0",
-          300: "#86efac",
-          400: "#4ade80",
-          500: "#22c55e",
-          600: "#16a34a",
-          700: "#15803d",
-          800: "#166534",
-          900: "#14532d",
-          950: "#052e16"
+          yellow: { DEFAULT: "#FFC300", light: "#FFD84D", dark: "#E6AF00" },
+          orange: { DEFAULT: "#FF6B00", light: "#FF8C33", dark: "#E65C00" },
+          black: { DEFAULT: "#0A0A0A" },
+          white: { DEFAULT: "#FFFFFF" }
         },
         surface: {
           0: "#020617",
@@ -24,9 +17,9 @@ export const tailwindPreset = {
           300: "#334155"
         },
         accent: {
-          gold: "#fbbf24",
-          cyan: "#06b6d4",
-          amber: "#f59e0b"
+          gold: "#FFC300",
+          orange: "#FF6B00",
+          amber: "#FF8C33"
         }
       },
       fontSize: {

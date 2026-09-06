@@ -13,11 +13,11 @@ export default function TermsOfServicePage() {
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Header */}
         <div className="border-b border-slate-800 pb-8 space-y-3">
-          <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+          <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
             TERMS OF ENGAGEMENT
           </Label>
           <Display size="2xl" className="tracking-tighter uppercase text-white">
-            TERMS <span className="text-emerald-500 font-mono">/</span> OF SERVICE.
+            TERMS <span className="text-brand-orange font-mono">/</span> OF SERVICE.
           </Display>
           <p className="text-sm font-mono text-slate-400">
             Last Updated: January 2026 · Script2Scale Commercial Agreements
@@ -58,14 +58,14 @@ export default function TermsOfServicePage() {
               04. Inquiries & Legal Support
             </h3>
             <p>
-              For legal inquiries or commercial contract customization, please reach out to <a href="mailto:legal@script2scale.com" className="text-emerald-400 underline">legal@script2scale.com</a>.
+              For legal inquiries or commercial contract customization, please reach out to <a href="mailto:legal@script2scale.com" className="text-brand-yellow underline">legal@script2scale.com</a>.
             </p>
           </Card>
         </div>
 
         {/* Back Link */}
         <div className="pt-6 border-t border-slate-800 flex justify-between items-center text-xs font-mono text-slate-500">
-          <a href="/" className="hover:text-emerald-400 transition-colors">
+          <a href="/" className="hover:text-brand-yellow transition-colors">
             ← RETURN TO HOMEPAGE
           </a>
           <span>Script2Scale Studio</span>

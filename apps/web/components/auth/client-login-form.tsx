@@ -65,15 +65,15 @@ export function ClientLoginForm({
 
       {/* Stub Message Alert Box */}
       {stubMessage && (
-        <div className="p-4 bg-emerald-950/60 border border-emerald-500/60 rounded-xl text-xs font-mono text-emerald-300 space-y-2 animate-fade-in">
-          <div className="flex items-center gap-2 font-bold text-emerald-400">
+        <div className="p-4 bg-brand-yellow/10 border border-brand-yellow/40 rounded-xl text-xs font-mono text-brand-yellow space-y-2 animate-fade-in">
+          <div className="flex items-center gap-2 font-bold text-brand-yellow">
             <span>ℹ️ STUB AUTHENTICATION HANDLER</span>
           </div>
           <p className="leading-relaxed">{stubMessage}</p>
           <div className="pt-1">
             <a
               href={portalUrl}
-              className="inline-block text-xs font-bold text-white underline hover:text-emerald-300"
+              className="inline-block text-xs font-bold text-white underline hover:text-brand-yellow"
             >
               PREVIEW CLIENT PORTAL DASHBOARD SHELL →
             </a>
@@ -88,7 +88,7 @@ export function ClientLoginForm({
             htmlFor="client-login-email"
             className="block text-xs font-mono text-slate-300 mb-1.5 uppercase tracking-wider"
           >
-            EMAIL ADDRESS <span className="text-emerald-400">*</span>
+            EMAIL ADDRESS <span className="text-brand-yellow">*</span>
           </label>
           <input
             id="client-login-email"
@@ -103,8 +103,8 @@ export function ClientLoginForm({
             aria-required="true"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? "client-login-email-error" : undefined}
-            className={`w-full rounded-xl bg-slate-900 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 transition-colors ${
-              errors.email ? "border-red-500" : "border-slate-800 focus:border-emerald-500"
+            className={`w-full rounded-xl bg-slate-900 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 focus:ring-offset-slate-950 transition-colors ${
+              errors.email ? "border-red-500" : "border-slate-800 focus:border-brand-yellow"
             }`}
           />
           {errors.email && (
@@ -121,11 +121,11 @@ export function ClientLoginForm({
               htmlFor="client-login-password"
               className="text-xs font-mono text-slate-300 uppercase tracking-wider"
             >
-              PASSWORD <span className="text-emerald-400">*</span>
+              PASSWORD <span className="text-brand-yellow">*</span>
             </label>
             <a
               href={forgotPasswordHref}
-              className="text-xs font-mono text-slate-400 hover:text-emerald-400 underline transition-colors"
+              className="text-xs font-mono text-slate-400 hover:text-brand-yellow underline transition-colors"
             >
               Forgot password?
             </a>
@@ -143,8 +143,8 @@ export function ClientLoginForm({
             aria-required="true"
             aria-invalid={Boolean(errors.password)}
             aria-describedby={errors.password ? "client-login-password-error" : undefined}
-            className={`w-full rounded-xl bg-slate-900 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 transition-colors ${
-              errors.password ? "border-red-500" : "border-slate-800 focus:border-emerald-500"
+            className={`w-full rounded-xl bg-slate-900 border px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 focus:ring-offset-slate-950 transition-colors ${
+              errors.password ? "border-red-500" : "border-slate-800 focus:border-brand-yellow"
             }`}
           />
           {errors.password && (
@@ -165,7 +165,7 @@ export function ClientLoginForm({
           >
             {isSubmitting ? (
               <span className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full border-2 border-emerald-400 border-t-transparent animate-spin" />
+                <span className="w-4 h-4 rounded-full border-2 border-brand-yellow border-t-transparent animate-spin" />
                 AUTHENTICATING...
               </span>
             ) : (

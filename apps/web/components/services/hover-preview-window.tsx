@@ -71,7 +71,7 @@ export function HoverPreviewWindow({ service, positionY = 0 }: HoverPreviewWindo
             <p className="text-xs text-slate-400 line-clamp-2">{service.shortDesc}</p>
             <div className="flex flex-wrap gap-1.5 pt-1">
               {service.tags.map((tag) => (
-                <span key={tag} className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">
+                <span key={tag} className="text-[10px] font-mono text-brand-yellow bg-brand-yellow/10 px-2 py-0.5 rounded border border-brand-yellow/30">
                   {tag}
                 </span>
               ))}

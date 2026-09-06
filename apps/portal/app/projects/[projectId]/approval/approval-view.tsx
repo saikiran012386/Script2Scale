@@ -55,17 +55,17 @@ export function ProjectApprovalView({
 
   if (isApproved) {
     return (
-      <Card variant="bordered" className="p-8 bg-slate-900/90 border-emerald-500/50 shadow-2xl space-y-8 relative overflow-hidden">
-        <div className="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+      <Card variant="bordered" className="p-8 bg-slate-900/90 border-brand-yellow/40 shadow-2xl space-y-8 relative overflow-hidden">
+        <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Header Certificate Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-emerald-950 border border-emerald-500/50 flex items-center justify-center text-emerald-400 text-3xl shadow-lg shadow-emerald-950/80">
+            <div className="w-16 h-16 rounded-2xl bg-slate-950 border border-brand-yellow/40 flex items-center justify-center text-brand-yellow text-3xl shadow-lg">
               🏆
             </div>
             <div>
-              <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">
+              <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest font-bold">
                 PROJECT APPROVED & COMPLETED
               </span>
               <h2 className="text-2xl font-extrabold text-white tracking-tight">
@@ -96,7 +96,7 @@ export function ProjectApprovalView({
 
               <div>
                 <span className="text-slate-500 text-[10px] block uppercase">AUTHORIZED CLIENT SIGNER:</span>
-                <span className="text-emerald-400 font-bold">
+                <span className="text-brand-yellow font-bold">
                   {approval?.approvedBy || clientName}
                 </span>
                 <span className="text-slate-400 text-[11px] block">
@@ -120,7 +120,7 @@ export function ProjectApprovalView({
 
               <div>
                 <span className="text-slate-500 text-[10px] block uppercase">DELIVERY STATUS:</span>
-                <span className="text-emerald-400 font-bold">
+                <span className="text-brand-yellow font-bold">
                   Unwatermarked Master Renders Queued
                 </span>
               </div>
@@ -136,7 +136,7 @@ export function ProjectApprovalView({
         </div>
 
         {/* Master Asset Download Action */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-xl bg-emerald-950/40 border border-emerald-800/60">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-xl bg-slate-950 border border-brand-yellow/30">
           <div className="space-y-1">
             <h4 className="text-sm font-bold text-white font-mono uppercase">Master Assets & Master Renders</h4>
             <p className="text-xs text-slate-300">
@@ -146,7 +146,7 @@ export function ProjectApprovalView({
 
           <a
             href={`/projects/${projectId}/files`}
-            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold text-center shadow-lg transition-all"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-orange hover:bg-brand-orange-dark text-white font-mono text-xs font-bold text-center shadow-lg transition-all"
           >
             Access Final Files →
           </a>
@@ -160,7 +160,7 @@ export function ProjectApprovalView({
       {/* Overview Card */}
       <Card variant="bordered" className="p-6 bg-slate-900/90 border-slate-800 space-y-4">
         <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-          <div className="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-mono">
+          <div className="w-10 h-10 rounded-xl bg-slate-950 border border-brand-yellow/40 flex items-center justify-center text-brand-yellow text-xl font-mono">
             📋
           </div>
           <div>
@@ -197,13 +197,13 @@ export function ProjectApprovalView({
       </Card>
 
       {/* Approval Form Card */}
-      <Card variant="bordered" className="p-6 bg-slate-900/90 border-emerald-500/30 space-y-6">
+      <Card variant="bordered" className="p-6 bg-slate-900/90 border-brand-yellow/30 space-y-6">
         <h3 className="text-sm font-bold text-white uppercase font-mono tracking-wider">
           Approval Confirmation & Authorization
         </h3>
 
         <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 space-y-2">
-          <p className="flex items-center gap-2 text-emerald-400 font-semibold">
+          <p className="flex items-center gap-2 text-brand-yellow font-semibold">
             <span>✔</span>
             <span>By approving this cut, you confirm that all feedback and edit requests have been fulfilled.</span>
           </p>
@@ -233,19 +233,19 @@ export function ProjectApprovalView({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="e.g. Approved for campaign release! Excellent work team."
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-brand-yellow"
             />
           </div>
 
-          <label className="flex items-start gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer group transition-colors hover:border-emerald-500/50">
+          <label className="flex items-start gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer group transition-colors hover:border-brand-yellow/50">
             <input
               type="checkbox"
               checked={isConfirmed}
               onChange={(e) => setIsConfirmed(e.target.checked)}
-              className="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500 focus:ring-offset-slate-950"
+              className="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slate-900 text-brand-yellow focus:ring-brand-yellow focus:ring-offset-slate-950"
             />
             <span className="text-slate-200 leading-relaxed font-sans text-xs sm:text-sm">
-              I approve <strong className="text-emerald-400">{latestVersion ? `Version v${latestVersion.versionNumber}` : "Version v2"}</strong> as the final deliverable for <strong className="text-white">{projectName}</strong>.
+              I approve <strong className="text-brand-yellow">{latestVersion ? `Version v${latestVersion.versionNumber}` : "Version v2"}</strong> as the final deliverable for <strong className="text-white">{projectName}</strong>.
             </span>
           </label>
 
@@ -255,7 +255,7 @@ export function ProjectApprovalView({
             size="lg"
             className={`w-full py-3.5 text-sm font-bold font-mono transition-all ${
               isConfirmed
-                ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-950/60"
+                ? "bg-brand-orange hover:bg-brand-orange-dark text-white shadow-lg shadow-brand-orange/20"
                 : "bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700"
             }`}
           >

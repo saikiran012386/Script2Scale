@@ -22,15 +22,15 @@ export default async function ProjectApprovalPage({
       {/* Top Header & Breadcrumbs */}
       <div>
         <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Dashboard
           </a>
           <span>/</span>
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Projects
           </a>
           <span>/</span>
-          <a href={`/projects/${project.id}`} className="hover:text-emerald-400 transition-colors truncate">
+          <a href={`/projects/${project.id}`} className="hover:text-brand-yellow transition-colors truncate">
             {project.name}
           </a>
           <span>/</span>
@@ -82,7 +82,7 @@ export default async function ProjectApprovalPage({
           </a>
           <a
             href={`/projects/${project.id}/approval`}
-            className="border-b-2 border-emerald-400 py-3 text-emerald-400 font-bold flex items-center gap-2"
+            className="border-b-2 border-brand-yellow py-3 text-brand-yellow font-bold flex items-center gap-2"
           >
             <span>Final Approval</span>
           </a>

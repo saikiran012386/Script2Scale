@@ -13,11 +13,11 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Hero Section */}
         <div className="border-b border-slate-800 pb-12 space-y-4">
-          <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+          <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
             OUR MANIFESTO
           </Label>
           <Display size="2xl" className="tracking-tighter uppercase text-white leading-tight">
-            WE DON'T <span className="text-emerald-500 font-mono">/</span> JUST EDIT.
+            WE DON'T <span className="text-brand-orange font-mono">/</span> JUST EDIT.
           </Display>
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl leading-relaxed font-sans">
             Content should not just look good — it should do something. We build high-retention video post-production pipelines and visual assets engineered for growth, reach, and conversion.
@@ -27,7 +27,7 @@ export default function AboutPage() {
         {/* Core Pillars */}
         <div className="grid md:grid-cols-3 gap-6">
           <Card variant="bordered" className="p-8 bg-surface-100/50 border-slate-800 space-y-4">
-            <span className="font-mono text-emerald-400 text-xs font-bold block">01. STORY FIRST</span>
+            <span className="font-mono text-brand-yellow text-xs font-bold block">01. STORY FIRST</span>
             <h3 className="text-xl font-bold text-white tracking-tight">Narrative Retention</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               Every cut, sound effect, and visual pattern interrupt is calculated to hook viewers in the first 3 seconds and sustain watch-time.
@@ -35,7 +35,7 @@ export default function AboutPage() {
           </Card>
 
           <Card variant="bordered" className="p-8 bg-surface-100/50 border-slate-800 space-y-4">
-            <span className="font-mono text-emerald-400 text-xs font-bold block">02. MODULAR PIPELINE</span>
+            <span className="font-mono text-brand-yellow text-xs font-bold block">02. MODULAR PIPELINE</span>
             <h3 className="text-xl font-bold text-white tracking-tight">Full-Stack Production</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               From commercial video editing to 3D motion graphics, high-CTR YouTube thumbnails, key art posters, and investor pitch decks.
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </Card>
 
           <Card variant="bordered" className="p-8 bg-surface-100/50 border-slate-800 space-y-4">
-            <span className="font-mono text-emerald-400 text-xs font-bold block">03. CLIENT PORTAL</span>
+            <span className="font-mono text-brand-yellow text-xs font-bold block">03. CLIENT PORTAL</span>
             <h3 className="text-xl font-bold text-white tracking-tight">Seamless Revisions</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               No endless email threads. Review watermarked video versions with frame-accurate timestamp feedback directly inside your Client Portal.

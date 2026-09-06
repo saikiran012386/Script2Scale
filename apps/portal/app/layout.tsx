@@ -13,7 +13,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
         <header className="border-b border-slate-800 bg-slate-900/60 px-6 py-4">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <a href="/dashboard" className="text-lg font-bold tracking-tight text-white">
-              SCRIPT<span className="text-emerald-500">2</span>SCALE <span className="text-xs text-slate-400 font-mono">PORTAL</span>
+              SCRIPT<span className="text-brand-yellow">2</span>SCALE <span className="text-xs text-slate-400 font-mono">PORTAL</span>
             </a>
             <div className="flex items-center gap-4 text-sm font-medium text-slate-300">
               <a href="/dashboard" className="hover:text-white transition-colors">Projects</a>

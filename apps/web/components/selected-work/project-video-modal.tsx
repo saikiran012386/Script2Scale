@@ -65,7 +65,7 @@ export function ProjectVideoModal({ project, onClose }: ProjectVideoModalProps) 
 
           <button
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             aria-label="Close project viewer"
           >
             ✕ CLOSE

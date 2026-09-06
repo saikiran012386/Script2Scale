@@ -45,7 +45,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       {/* Back Link */}
       <a
         href="/work"
-        className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 hover:underline focus-visible:ring-2 focus-visible:ring-emerald-400 rounded px-1"
+        className="inline-flex items-center gap-2 text-xs font-mono text-brand-yellow hover:underline focus-visible:ring-2 focus-visible:ring-brand-yellow rounded px-1"
       >
         ← BACK TO ALL WORK ARCHIVE
       </a>
@@ -110,7 +110,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       <div className="grid md:grid-cols-2 gap-8 pt-4">
         <Card variant="bordered" className="p-8 space-y-4">
           <CardHeader className="p-0">
-            <Label uppercase mono size="xs" className="text-emerald-400">PRODUCTION NARRATIVE</Label>
+            <Label uppercase mono size="xs" className="text-brand-yellow">PRODUCTION NARRATIVE</Label>
             <CardTitle className="text-xl mt-1">What We Did</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
@@ -122,11 +122,11 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
         <Card variant="bordered" className="p-8 space-y-4">
           <CardHeader className="p-0">
-            <Label uppercase mono size="xs" className="text-emerald-400">OUTCOME & IMPACT</Label>
+            <Label uppercase mono size="xs" className="text-brand-yellow">OUTCOME & IMPACT</Label>
             <CardTitle className="text-xl mt-1">Performance Results</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            <Body size="md" className="text-emerald-400 font-semibold">
+            <Body size="md" className="text-brand-yellow font-semibold">
               {project.results}
             </Body>
           </CardContent>
@@ -140,7 +140,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           className="group flex flex-col items-start p-4 rounded-xl border border-slate-800 bg-surface-100 hover:border-slate-700 w-full sm:w-auto transition-colors"
         >
           <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">← PREVIOUS PROJECT</span>
-          <span className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors mt-1">
+          <span className="text-sm font-bold text-white group-hover:text-brand-yellow transition-colors mt-1">
             {prevProject.title}
           </span>
         </a>
@@ -150,7 +150,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           className="group flex flex-col items-end p-4 rounded-xl border border-slate-800 bg-surface-100 hover:border-slate-700 w-full sm:w-auto transition-colors"
         >
           <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">NEXT PROJECT →</span>
-          <span className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors mt-1">
+          <span className="text-sm font-bold text-white group-hover:text-brand-yellow transition-colors mt-1">
             {nextProject.title}
           </span>
         </a>

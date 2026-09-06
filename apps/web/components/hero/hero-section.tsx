@@ -28,7 +28,7 @@ export function HeroSection() {
         className="absolute inset-0 pointer-events-none flex items-center justify-center"
         style={glowLayer.style}
       >
-        <div className="h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[120px]" />
+        <div className="h-[500px] w-[500px] rounded-full bg-brand-yellow/15 blur-[120px]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
       </div>
 
@@ -43,7 +43,7 @@ export function HeroSection() {
       >
         {/* Badge Layer */}
         <div style={floatBadge.style}>
-          <Badge variant="brand" size="md" className="shadow-lg shadow-emerald-950/40">
+          <Badge variant="brand" size="md" className="shadow-lg shadow-brand-yellow/20">
             VIDEO PRODUCTION & POST-STUDIO
           </Badge>
         </div>
@@ -51,7 +51,7 @@ export function HeroSection() {
         {/* Headline & Text Parallax Layer */}
         <div style={textLayer.style} className="space-y-6 max-w-4xl">
           <Display size="2xl" className="leading-[0.95] tracking-tighter">
-            FROM SCRIPT <span className="text-emerald-500 font-mono">/</span> TO SCALE
+            FROM SCRIPT <span className="text-brand-orange font-mono">/</span> TO SCALE
           </Display>
           <Body size="lg" muted className="max-w-2xl mx-auto text-slate-300">
             We engineer high-retention commercial video systems, motion graphics, and post-production workflows for brands scaling to market leadership.
@@ -79,7 +79,7 @@ export function HeroSection() {
         style={floatCard1.style}
       >
         <div className="w-64 aspect-video rounded-xl bg-surface-100 border border-slate-700/80 p-2 shadow-2xl backdrop-blur-md opacity-80 rotate-[-4deg] transition-all hover:rotate-0 hover:opacity-100">
-          <div className="h-full w-full rounded-lg bg-slate-900 flex items-center justify-center text-[11px] font-mono text-emerald-400">
+          <div className="h-full w-full rounded-lg bg-slate-900 flex items-center justify-center text-[11px] font-mono text-brand-yellow">
             [PREVIEW // COMMERCIAL CUT]
           </div>
         </div>
@@ -91,7 +91,7 @@ export function HeroSection() {
         style={floatCard2.style}
       >
         <div className="w-72 aspect-video rounded-xl bg-surface-100 border border-slate-700/80 p-2 shadow-2xl backdrop-blur-md opacity-85 rotate-[5deg] transition-all hover:rotate-0 hover:opacity-100">
-          <div className="h-full w-full rounded-lg bg-slate-900 flex items-center justify-center text-[11px] font-mono text-emerald-400">
+          <div className="h-full w-full rounded-lg bg-slate-900 flex items-center justify-center text-[11px] font-mono text-brand-yellow">
             [PREVIEW // 3D MOTION SYSTEM]
           </div>
         </div>

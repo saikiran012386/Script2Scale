@@ -72,7 +72,7 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
   if (!data || !data.client) {
     return (
       <div className="space-y-6">
-        <a href="/clients" className="text-xs font-mono text-emerald-400 hover:underline">
+        <a href="/clients" className="text-xs font-mono text-brand-yellow hover:underline">
           ← BACK TO CLIENTS DIRECTORY
         </a>
         <div className="p-12 border border-slate-800 rounded-2xl bg-slate-900 text-center space-y-3">
@@ -89,7 +89,7 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
     <div className="space-y-8 animate-fade-in">
       {/* Back Link & Header */}
       <div className="space-y-4 border-b border-slate-800 pb-6">
-        <a href="/clients" className="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+        <a href="/clients" className="text-xs font-mono text-slate-400 hover:text-brand-yellow transition-colors">
           ← BACK TO CLIENTS DIRECTORY
         </a>
 
@@ -137,7 +137,7 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -156,7 +156,7 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
           </CardTitle>
           <CardContent className="p-0 space-y-1">
             <p className="text-base font-bold text-white">{client.name}</p>
-            <p className="text-xs font-mono text-emerald-400">{client.email}</p>
+            <p className="text-xs font-mono text-brand-yellow">{client.email}</p>
             {client.phone && <p className="text-xs font-mono text-slate-400">{client.phone}</p>}
           </CardContent>
         </Card>
@@ -219,18 +219,18 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
               <Card key={proj.id} variant="bordered" className="p-5 bg-slate-900/90 border-slate-800 hover:border-slate-700 transition-colors space-y-3">
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <a href={`/projects/${proj.id}`} className="font-bold text-white hover:text-emerald-400 transition-colors">
+                    <a href={`/projects/${proj.id}`} className="font-bold text-white hover:text-brand-yellow transition-colors">
                       {proj.name}
                     </a>
                     {proj.description && <p className="text-xs text-slate-400 line-clamp-1">{proj.description}</p>}
                   </div>
-                  <Badge variant="outline" className="text-[10px] font-mono text-emerald-400 border-emerald-500/30 uppercase">
+                  <Badge variant="outline" className="text-[10px] font-mono text-brand-yellow border-brand-yellow/30 uppercase">
                     {proj.status}
                   </Badge>
                 </div>
                 <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-xs font-mono text-slate-500">
                   <span>Version: v{proj.latestVersion || 1}</span>
-                  <a href={`/projects/${proj.id}`} className="text-emerald-400 hover:underline">
+                  <a href={`/projects/${proj.id}`} className="text-brand-yellow hover:underline">
                     WORKSPACE →
                   </a>
                 </div>
@@ -270,9 +270,9 @@ export default function ClientDetailPage({ params }: { params: { clientId: strin
                   </td>
                   <td className="px-6 py-4">
                     {u.emailVerified ? (
-                      <span className="text-xs font-mono text-emerald-400">✓ Activated</span>
+                      <span className="text-xs font-mono text-brand-yellow">✓ Activated</span>
                     ) : (
-                      <span className="text-xs font-mono text-amber-400">Invitation Pending</span>
+                      <span className="text-xs font-mono text-brand-orange">Invitation Pending</span>
                     )}
                   </td>
                 </tr>

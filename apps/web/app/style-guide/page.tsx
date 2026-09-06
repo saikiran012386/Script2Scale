@@ -30,7 +30,7 @@ export default function DesignSystemStyleGuide() {
 
       {/* Header */}
       <div className="border-b border-slate-800 pb-8">
-        <Label uppercase mono size="xs" className="text-emerald-400">Design System QA Surface</Label>
+        <Label uppercase mono size="xs" className="text-brand-yellow">Design System QA Surface</Label>
         <Display size="xl" className="mt-2">Script2Scale Visual Tokens</Display>
         <Body size="lg" muted className="mt-2">
           Centralized style-guide rendering typography scales, color palettes, button variants, motion presets, and form primitives.
@@ -41,33 +41,46 @@ export default function DesignSystemStyleGuide() {
       <section className="space-y-6">
         <Heading level={2}>1. Color Palette Tokens</Heading>
         <div>
-          <Label uppercase className="mb-3 block">Brand Colors (Emerald Palette)</Label>
-          <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-3">
-            {[50, 100, 200, 300, 400, 500, 600, 700, 800, 900].map((shade) => (
-              <div key={shade} className="space-y-1 text-center">
-                <div
-                  className="h-14 rounded-lg border border-slate-800"
-                  style={{ backgroundColor: `var(--color-brand-${shade}, ${
-                    shade === 50 ? "#f0fdf4" :
-                    shade === 100 ? "#dcfce7" :
-                    shade === 200 ? "#bbf7d0" :
-                    shade === 300 ? "#86efac" :
-                    shade === 400 ? "#4ade80" :
-                    shade === 500 ? "#22c55e" :
-                    shade === 600 ? "#16a34a" :
-                    shade === 700 ? "#15803d" :
-                    shade === 800 ? "#166534" : "#14532d"
-                  })` }}
-                />
-                <span className="text-[10px] font-mono text-slate-400">{shade}</span>
-              </div>
-            ))}
+          <Label uppercase className="mb-3 block">Brand Palette (Yellow, Orange, Black, White)</Label>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-yellow border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">yellow (#FFC300)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-yellow-light border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">yellow-light (#FFD84D)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-yellow-dark border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">yellow-dark (#E6AF00)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-orange border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">orange (#FF6B00)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-orange-light border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">orange-light (#FF8C33)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-orange-dark border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">orange-dark (#E65C00)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-black border border-slate-700" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">black (#0A0A0A)</span>
+            </div>
+            <div className="space-y-1 text-center">
+              <div className="h-14 rounded-lg bg-brand-white border border-slate-800" />
+              <span className="text-[10px] font-mono text-slate-300 block font-bold">white (#FFFFFF)</span>
+            </div>
           </div>
         </div>
 
         <div>
-          <Label uppercase className="mb-3 block">Surface Neutrals & Semantic States</Label>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <Label uppercase className="mb-3 block">Surface Neutrals & Layout Backgrounds</Label>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <Card variant="bordered" className="p-4">
               <div className="h-10 rounded bg-surface-0 border border-slate-700 mb-2" />
               <Label mono size="xs">surface-0 (#020617)</Label>
@@ -79,10 +92,6 @@ export default function DesignSystemStyleGuide() {
             <Card variant="bordered" className="p-4">
               <div className="h-10 rounded bg-surface-200 border border-slate-700 mb-2" />
               <Label mono size="xs">surface-200 (#1e293b)</Label>
-            </Card>
-            <Card variant="bordered" className="p-4">
-              <div className="h-10 rounded bg-accent-amber border border-amber-600 mb-2" />
-              <Label mono size="xs">accent-amber (#f59e0b)</Label>
             </Card>
           </div>
         </div>
@@ -116,7 +125,7 @@ export default function DesignSystemStyleGuide() {
             <Body size="lg">Body LG — Lead intro text explaining brand values and technical capabilities.</Body>
             <Body size="md" muted>Body MD (Muted) — Standard paragraph body copy for case studies and docs.</Body>
             <Body size="sm">Body SM — Fine details and metadata disclosures.</Body>
-            <Label uppercase mono size="sm" className="text-emerald-400 block mt-2">Label Component (Uppercase + Mono)</Label>
+            <Label uppercase mono size="sm" className="text-brand-yellow block mt-2">Label Component (Uppercase + Mono)</Label>
           </div>
         </div>
       </section>
@@ -201,13 +210,13 @@ export default function DesignSystemStyleGuide() {
         <Heading level={2}>6. Motion Tokens & Presets</Heading>
         <div className="bg-surface-100 p-6 rounded-xl border border-slate-800 space-y-4 font-mono text-xs text-slate-300">
           <div>
-            <span className="text-emerald-400 font-bold">EASINGS:</span> {JSON.stringify(EASINGS, null, 2)}
+            <span className="text-brand-yellow font-bold">EASINGS:</span> {JSON.stringify(EASINGS, null, 2)}
           </div>
           <div>
-            <span className="text-emerald-400 font-bold">DURATIONS:</span> {JSON.stringify(DURATIONS, null, 2)}
+            <span className="text-brand-yellow font-bold">DURATIONS:</span> {JSON.stringify(DURATIONS, null, 2)}
           </div>
           <div>
-            <span className="text-emerald-400 font-bold">MOTION_PRESETS:</span> {JSON.stringify(MOTION_PRESETS, null, 2)}
+            <span className="text-brand-yellow font-bold">MOTION_PRESETS:</span> {JSON.stringify(MOTION_PRESETS, null, 2)}
           </div>
         </div>
       </section>

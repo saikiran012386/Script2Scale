@@ -25,7 +25,7 @@ export function ServicePreview() {
       {/* Section Header */}
       <div className="border-b border-slate-800 pb-8">
         <Display size="xl" className="tracking-tighter">
-          OUR <span className="text-emerald-500 font-mono">/</span> EXPERTISE
+          OUR <span className="text-brand-orange font-mono">/</span> EXPERTISE
         </Display>
         <Body size="md" muted className="mt-2 max-w-2xl">
           Full-stack video production, motion graphics, and graphic design packages built to elevate your brand presence.

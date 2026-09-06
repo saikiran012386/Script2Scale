@@ -43,7 +43,7 @@ export default function AdminDashboardPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800/80 pb-6">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest">
+            <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest">
               AGENCY OPERATIONS HUB
             </span>
             <Badge variant="outline" className="text-[10px] text-slate-400 border-slate-700">
@@ -51,7 +51,7 @@ export default function AdminDashboardPage() {
             </Badge>
           </div>
           <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-            ADMIN <span className="text-emerald-500 font-mono">/</span> DASHBOARD.
+            ADMIN <span className="text-brand-yellow font-mono">/</span> DASHBOARD.
           </h1>
           <p className="text-sm text-slate-400">
             Real-time operations status across client accounts, project pipelines, and pending reviews.
@@ -90,7 +90,7 @@ export default function AdminDashboardPage() {
             <span className="text-4xl font-black text-white">
               {isLoading ? "…" : stats.activeClients}
             </span>
-            <a href="/clients" className="text-xs text-emerald-400 hover:underline font-mono">
+            <a href="/clients" className="text-xs text-brand-yellow hover:underline font-mono">
               DIRECTORY →
             </a>
           </CardContent>
@@ -101,10 +101,10 @@ export default function AdminDashboardPage() {
             ACTIVE PROJECTS
           </CardTitle>
           <CardContent className="p-0 flex items-baseline justify-between">
-            <span className="text-4xl font-black text-emerald-400">
+            <span className="text-4xl font-black text-brand-yellow">
               {isLoading ? "…" : stats.activeProjects}
             </span>
-            <a href="/projects" className="text-xs text-emerald-400 hover:underline font-mono">
+            <a href="/projects" className="text-xs text-brand-yellow hover:underline font-mono">
               PIPELINE →
             </a>
           </CardContent>
@@ -129,10 +129,10 @@ export default function AdminDashboardPage() {
             PENDING REVIEWS
           </CardTitle>
           <CardContent className="p-0 flex items-baseline justify-between">
-            <span className="text-4xl font-black text-amber-400">
+            <span className="text-4xl font-black text-brand-orange">
               {isLoading ? "…" : stats.pendingReviews}
             </span>
-            <a href="/projects" className="text-xs text-amber-400 hover:underline font-mono">
+            <a href="/projects" className="text-xs text-brand-orange hover:underline font-mono">
               VERSIONS →
             </a>
           </CardContent>

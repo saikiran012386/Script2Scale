@@ -13,9 +13,9 @@ export function AboutSection() {
     <section ref={ref} className="py-28 md:py-36 px-6 max-w-7xl mx-auto border-b border-slate-800/80 space-y-12">
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         <div>
-          <Label uppercase mono size="xs" className="text-emerald-400 block mb-2">Our Philosophy</Label>
+          <Label uppercase mono size="xs" className="text-brand-yellow block mb-2">Our Philosophy</Label>
           <Display size="xl" className="tracking-tighter">
-            WE DON'T <span className="text-emerald-500 font-mono">/</span> JUST EDIT.
+            WE DON'T <span className="text-brand-orange font-mono">/</span> JUST EDIT.
           </Display>
         </div>
 
@@ -37,7 +37,7 @@ export function AboutSection() {
             <span className="text-3xl md:text-5xl font-black font-display text-white tracking-tight block">
               {word}
             </span>
-            <span className="text-xs font-mono text-emerald-400 mt-2 block">
+            <span className="text-xs font-mono text-brand-yellow mt-2 block">
               PHASE 0{idx + 1}
             </span>
           </div>

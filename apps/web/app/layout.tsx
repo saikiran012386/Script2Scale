@@ -8,7 +8,7 @@ export const metadata = constructMetadata();
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+      <body className="bg-slate-950 text-slate-100 antialiased selection:bg-brand-yellow selection:text-brand-black">
         <CustomCursor />
         {children}
       </body>

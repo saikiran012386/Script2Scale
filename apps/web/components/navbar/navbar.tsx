@@ -20,7 +20,7 @@ export function Navbar() {
       {/* Skip to Content Link for Accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-emerald-500 focus:text-slate-950 focus:font-bold focus:rounded-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-yellow focus:text-brand-black focus:font-bold focus:rounded-lg"
       >
         Skip to main content
       </a>
@@ -36,10 +36,10 @@ export function Navbar() {
           {/* Brand Mark */}
           <a
             href="/"
-            className="group flex items-center gap-1.5 text-xl font-extrabold tracking-tighter text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-md"
+            className="group flex items-center gap-1.5 text-xl font-extrabold tracking-tighter text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow rounded-md"
           >
             <span className="font-display">SCRIPT</span>
-            <span className="text-emerald-500 font-mono transition-transform duration-300 group-hover:scale-125">
+            <span className="text-brand-orange font-mono transition-transform duration-300 group-hover:scale-125">
               2
             </span>
             <span className="font-display">SCALE</span>
@@ -53,13 +53,13 @@ export function Navbar() {
                 href={item.href}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className="relative py-1 text-slate-300 hover:text-emerald-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded"
+                className="relative py-1 text-slate-300 hover:text-brand-yellow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow rounded"
               >
                 <span className="inline-block transition-transform duration-200">
                   {hoveredIdx === idx ? item.hoverLabel : item.label}
                 </span>
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-emerald-400 transition-all duration-200 ${
+                  className={`absolute bottom-0 left-0 h-[2px] bg-brand-yellow transition-all duration-200 ${
                     hoveredIdx === idx ? "w-full" : "w-0"
                   }`}
                 />
@@ -71,7 +71,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <a
               href="/client-login"
-              className="hidden sm:inline-block text-xs font-mono font-medium text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded px-2 py-1"
+              className="hidden sm:inline-block text-xs font-mono font-medium text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow rounded px-2 py-1"
             >
               CLIENT LOGIN
             </a>

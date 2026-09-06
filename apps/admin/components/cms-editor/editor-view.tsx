@@ -16,11 +16,11 @@ export function CMSEditorView({ section }: { section: string }) {
         <CardContent className="space-y-4 p-0">
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-1">Headline Text</label>
-            <input defaultValue="From Raw Scripts to High-Converting Video Assets" className="w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500" />
+            <input defaultValue="From Raw Scripts to High-Converting Video Assets" className="w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-yellow" />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-1">Subheadline Description</label>
-            <textarea rows={3} defaultValue="We partner with modern brands and creators to engineer high-retention commercial video systems at scale." className="w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500" />
+            <textarea rows={3} defaultValue="We partner with modern brands and creators to engineer high-retention commercial video systems at scale." className="w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-yellow" />
           </div>
         </CardContent>
       </Card>

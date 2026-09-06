@@ -26,7 +26,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
       <div>
         <a
           href="/services"
-          className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-brand-yellow transition-colors"
         >
           <span>←</span>
           <span>BACK TO ALL SERVICES</span>
@@ -37,7 +37,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
       <div className="grid lg:grid-cols-12 gap-12 items-start border-b border-slate-800 pb-16">
         <div className="lg:col-span-7 space-y-6">
           <div className="flex flex-wrap items-center gap-3">
-            <Label uppercase mono size="xs" className="text-emerald-400 bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-800/50">
+            <Label uppercase mono size="xs" className="text-brand-yellow bg-brand-yellow/10 px-3 py-1 rounded-full border border-brand-yellow/30">
               SERVICE OFFERING
             </Label>
             {service.categoryFilterKey && (
@@ -48,7 +48,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
           </div>
 
           <Display size="2xl" className="tracking-tighter uppercase leading-tight">
-            {firstWord} <span className="text-emerald-500 font-mono">/</span> {restOfName}.
+            {firstWord} <span className="text-brand-orange font-mono">/</span> {restOfName}.
           </Display>
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-sans">
@@ -82,7 +82,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
 
         {/* Media Preview Box */}
         <div className="lg:col-span-5">
-          <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl shadow-emerald-950/20 group">
+          <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl shadow-brand-yellow/10 group">
             <div className="aspect-video w-full relative">
               <video
                 src={service.previewMedia.url}
@@ -96,7 +96,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
             </div>
             <div className="p-4 bg-surface-100/90 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
               <span>PREVIEW DEMO REEL</span>
-              <span className="text-emerald-400 font-bold">LIVE PREVIEW</span>
+              <span className="text-brand-yellow font-bold">LIVE PREVIEW</span>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
       {/* Sub-Offerings & Capabilities Breakdown */}
       <div id="sub-offerings" className="space-y-8 scroll-mt-24">
         <div className="space-y-2">
-          <Label uppercase mono size="xs" className="text-emerald-400">
+          <Label uppercase mono size="xs" className="text-brand-yellow">
             CAPABILITIES & SPECIALIZATIONS
           </Label>
           <Display size="lg" className="tracking-tight">
@@ -122,7 +122,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
                 className="p-6 space-y-3 bg-surface-100/50 hover:border-slate-700 transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-emerald-400 font-bold">
+                  <span className="font-mono text-xs text-brand-yellow font-bold">
                     0{idx + 1}.
                   </span>
                   <h4 className="text-lg font-bold text-white tracking-tight">
@@ -146,7 +146,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
             <div className="grid sm:grid-cols-2 gap-4">
               {service.features.map((feature) => (
                 <div key={feature} className="flex items-start gap-3">
-                  <span className="text-emerald-400 text-base font-bold select-none">✓</span>
+                  <span className="text-brand-yellow text-base font-bold select-none">✓</span>
                   <span className="text-sm text-slate-300 font-medium">{feature}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
         <div className="space-y-8 border-t border-slate-800 pt-16">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-2">
-              <Label uppercase mono size="xs" className="text-emerald-400">
+              <Label uppercase mono size="xs" className="text-brand-yellow">
                 PROVEN RESULTS
               </Label>
               <Display size="lg" className="tracking-tight">
@@ -170,7 +170,7 @@ export function ServiceDetailClient({ service, matchingProjects }: ServiceDetail
             {service.categoryFilterKey && (
               <a
                 href={`/work?category=${service.categoryFilterKey}`}
-                className="text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1"
+                className="text-xs font-mono font-bold text-brand-yellow hover:text-brand-orange transition-colors flex items-center gap-1"
               >
                 <span>VIEW ALL {service.categoryFilterKey} PROJECTS</span>
                 <span>→</span>

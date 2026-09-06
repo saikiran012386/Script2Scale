@@ -23,11 +23,11 @@ export default async function ProjectOverviewPage({
       {/* Top Header & Breadcrumbs */}
       <div>
         <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Dashboard
           </a>
           <span>/</span>
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Projects
           </a>
           <span>/</span>
@@ -58,7 +58,7 @@ export default async function ProjectOverviewPage({
             {latestVersion ? (
               <a
                 href={`/projects/${project.id}/review?v=${latestVersion.versionNumber}`}
-                className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm font-mono shadow-lg shadow-emerald-950/40 transition-all flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-sm font-mono shadow-lg transition-all flex items-center gap-2"
               >
                 <span>Review Video v{latestVersion.versionNumber}</span>
                 <span>→</span>
@@ -80,7 +80,7 @@ export default async function ProjectOverviewPage({
         <nav className="flex space-x-8 font-mono text-sm">
           <a
             href={`/projects/${project.id}`}
-            className="border-b-2 border-emerald-400 py-3 text-emerald-400 font-bold flex items-center gap-2"
+            className="border-b-2 border-brand-yellow py-3 text-brand-yellow font-bold flex items-center gap-2"
           >
             <span>Overview</span>
           </a>
@@ -132,7 +132,7 @@ export default async function ProjectOverviewPage({
 
               <div className="flex justify-between items-center py-2 border-b border-slate-800/80">
                 <span className="text-slate-400">Service</span>
-                <span className="text-emerald-400 font-semibold">{project.serviceType || "Custom"}</span>
+                <span className="text-brand-yellow font-semibold">{project.serviceType || "Custom"}</span>
               </div>
 
               <div className="flex justify-between items-center py-2 border-b border-slate-800/80">

@@ -9,7 +9,7 @@ export function FillCTAButton() {
         Tell us about your project vision, timeline, and goals. We'll assemble a custom proposal.
       </p>
       <a href="/start-a-project">
-        <Button size="lg" className="px-8 py-4 text-lg bg-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-950">
+        <Button variant="magnetic-fill" size="lg" className="px-8 py-4 text-lg">
           Start a Project →
         </Button>
       </a>

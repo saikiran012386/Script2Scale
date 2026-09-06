@@ -45,9 +45,9 @@ function WorkPageContent() {
     <div className="py-12 md:py-20 px-6 max-w-7xl mx-auto space-y-12">
       {/* Page Hero */}
       <div className="border-b border-slate-800 pb-8 space-y-3">
-        <Label uppercase mono size="xs" className="text-emerald-400 block">Portfolio Archive</Label>
+        <Label uppercase mono size="xs" className="text-brand-yellow block">Portfolio Archive</Label>
         <Display size="2xl" className="tracking-tighter">
-          OUR <span className="text-emerald-500 font-mono">/</span> WORK.
+          OUR <span className="text-brand-orange font-mono">/</span> WORK.
         </Display>
         <Body size="lg" muted className="max-w-2xl text-slate-300">
           Browse our complete archive of commercial video productions, 3D motion graphics, high-CTR thumbnails, key art posters, and investor brochures.
@@ -65,7 +65,7 @@ function WorkPageContent() {
                 onClick={() => handleSelectFilter(tab.value)}
                 className={`px-4 py-2 rounded-lg text-xs font-mono font-bold tracking-wider transition-all whitespace-nowrap border ${
                   isActive
-                    ? "bg-emerald-600 text-white border-emerald-500 shadow-md shadow-emerald-950/40"
+                    ? "bg-brand-orange text-white border-brand-orange shadow-md shadow-brand-yellow/10"
                     : "bg-surface-100 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
                 }`}
               >

@@ -16,7 +16,7 @@ export default function PortalForgotPasswordPage() {
     <div className="min-h-[75vh] flex flex-col items-center justify-center py-12 px-6">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
-          <Label uppercase mono size="xs" className="text-emerald-400">
+          <Label uppercase mono size="xs" className="text-brand-yellow">
             PORTAL RECOVERY
           </Label>
           <Display size="xl" className="tracking-tight uppercase text-white">
@@ -27,7 +27,7 @@ export default function PortalForgotPasswordPage() {
         <Card variant="bordered" className="p-8 bg-surface-100/80 border-slate-800 space-y-4">
           {isSubmitted ? (
             <div className="text-center space-y-4">
-              <p className="text-xs font-mono text-emerald-400">
+              <p className="text-xs font-mono text-brand-yellow">
                 Password recovery link sent to <strong>{email}</strong>.
               </p>
               <a href="/login">
@@ -48,7 +48,7 @@ export default function PortalForgotPasswordPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
                 />
               </div>
               <Button type="submit" variant="magnetic-fill" size="md" className="w-full justify-center">

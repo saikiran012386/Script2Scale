@@ -69,7 +69,7 @@ export function InquiryDetailModal({
               id="inquiry-status-select"
               value={inquiry.status}
               onChange={(e) => onStatusChange(inquiry.id, e.target.value)}
-              className="bg-slate-900 text-xs font-mono text-slate-200 border border-slate-700 rounded-lg px-2.5 py-1 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="bg-slate-900 text-xs font-mono text-slate-200 border border-slate-700 rounded-lg px-2.5 py-1 focus:outline-none focus:ring-1 focus:ring-brand-yellow"
             >
               {INQUIRY_STATUSES.map((st) => (
                 <option key={st} value={st}>
@@ -94,7 +94,7 @@ export function InquiryDetailModal({
 
           <div>
             <span className="text-[10px] font-mono text-slate-400 uppercase block">EMAIL ADDRESS</span>
-            <a href={`mailto:${inquiry.email}`} className="text-xs font-mono text-emerald-400 hover:underline mt-0.5 block">
+            <a href={`mailto:${inquiry.email}`} className="text-xs font-mono text-brand-yellow hover:underline mt-0.5 block">
               {inquiry.email}
             </a>
           </div>
@@ -108,11 +108,11 @@ export function InquiryDetailModal({
         {/* Project Scope & Requirements */}
         <div className="space-y-4">
           <div>
-            <span className="text-xs font-mono text-emerald-400 uppercase block mb-1">SERVICES REQUESTED</span>
+            <span className="text-xs font-mono text-brand-yellow uppercase block mb-1">SERVICES REQUESTED</span>
             <div className="flex flex-wrap gap-2">
               {inquiry.services && inquiry.services.length > 0 ? (
                 inquiry.services.map((srv) => (
-                  <span key={srv} className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-900 text-emerald-300 border border-slate-800">
+                  <span key={srv} className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-900 text-brand-yellow border border-slate-800">
                     {srv}
                   </span>
                 ))
@@ -135,7 +135,7 @@ export function InquiryDetailModal({
           </div>
 
           <div>
-            <span className="text-xs font-mono text-emerald-400 uppercase block mb-1">PROJECT DETAILS / BRIEF</span>
+            <span className="text-xs font-mono text-brand-yellow uppercase block mb-1">PROJECT DETAILS / BRIEF</span>
             <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 leading-relaxed font-sans whitespace-pre-wrap">
               {inquiry.projectDetails || "No additional project brief text supplied."}
             </div>
@@ -148,7 +148,7 @@ export function InquiryDetailModal({
                 href={inquiry.referenceLinks}
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs font-mono text-emerald-400 hover:underline break-all block"
+                className="text-xs font-mono text-brand-yellow hover:underline break-all block"
               >
                 {inquiry.referenceLinks}
               </a>
@@ -164,7 +164,7 @@ export function InquiryDetailModal({
 
           {inquiry.convertedProjectId ? (
             <a href={`/projects/${inquiry.convertedProjectId}`}>
-              <Button variant="outline" size="sm" className="text-emerald-400 border-emerald-500">
+              <Button variant="outline" size="sm" className="text-brand-yellow border-brand-yellow">
                 VIEW CONVERTED WORKSPACE →
               </Button>
             </a>

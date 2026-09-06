@@ -75,9 +75,9 @@ export function ProcessSteps() {
     <section ref={ref} className="py-28 md:py-36 px-6 max-w-7xl mx-auto border-b border-slate-800/80 space-y-12">
       {/* Section Header */}
       <div className="border-b border-slate-800 pb-8">
-        <Label uppercase mono size="xs" className="text-emerald-400 block mb-2">Workflow System</Label>
+        <Label uppercase mono size="xs" className="text-brand-yellow block mb-2">Workflow System</Label>
         <Display size="xl" className="tracking-tighter">
-          HOW <span className="text-emerald-500 font-mono">/</span> WE WORK.
+          HOW <span className="text-brand-orange font-mono">/</span> WE WORK.
         </Display>
         <Body size="md" muted className="mt-2 max-w-xl">
           Five structured phases engineered for rapid turnaround, frame-accurate revisions, and zero production drag.
@@ -92,14 +92,14 @@ export function ProcessSteps() {
             onMouseEnter={() => handleMouseEnter(step)}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleStepClick(step.id)}
-            className={`p-6 md:p-8 rounded-2xl bg-surface-100 border border-slate-800/80 hover:border-emerald-500/50 transition-all cursor-pointer ${
+            className={`p-6 md:p-8 rounded-2xl bg-surface-100 border border-slate-800/80 hover:border-brand-yellow/50 transition-all cursor-pointer ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: `${idx * 100}ms` }}
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="flex items-start md:items-center gap-6">
-                <span className="font-mono text-3xl font-black text-emerald-500">{step.stepNumber}</span>
+                <span className="font-mono text-3xl font-black text-brand-yellow">{step.stepNumber}</span>
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">{step.title}</h3>
                   <p className="text-sm text-slate-400 mt-1">{step.desc}</p>

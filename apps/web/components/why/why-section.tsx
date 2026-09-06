@@ -10,9 +10,9 @@ export function WhySection() {
   return (
     <section ref={ref} className="py-28 md:py-36 px-6 max-w-7xl mx-auto border-b border-slate-800/80">
       <div className="bg-surface-100/60 border border-slate-800/80 rounded-3xl p-8 md:p-16 relative overflow-hidden text-center space-y-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.08)_0,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,195,0,0.1)_0,transparent_60%)] pointer-events-none" />
 
-        <Label uppercase mono size="xs" className="text-emerald-400 block">The Script2Scale Difference</Label>
+        <Label uppercase mono size="xs" className="text-brand-yellow block">The Script2Scale Difference</Label>
 
         <div className="space-y-4 max-w-4xl mx-auto">
           <div
@@ -30,7 +30,7 @@ export function WhySection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <Display size="2xl" className="text-white text-emerald-400 leading-tight">
+            <Display size="2xl" className="text-brand-yellow leading-tight">
               IT SHOULD DO SOMETHING.
             </Display>
           </div>

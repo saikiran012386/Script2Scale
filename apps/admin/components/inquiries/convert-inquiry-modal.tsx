@@ -105,7 +105,7 @@ export function ConvertInquiryModal({
           <div
             className={`p-3 rounded-xl text-xs font-mono border ${
               message.type === "success"
-                ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+                ? "bg-brand-yellow/10 border-brand-yellow/40 text-brand-yellow"
                 : "bg-red-950/60 border-red-500/60 text-red-300"
             }`}
           >
@@ -116,14 +116,14 @@ export function ConvertInquiryModal({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="convert-client" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              ASSIGNED PARTNER CLIENT <span className="text-emerald-400">*</span>
+              ASSIGNED PARTNER CLIENT <span className="text-brand-yellow">*</span>
             </label>
             <select
               id="convert-client"
               required
               value={clientId}
               onChange={(e) => setClientId(e.target.value)}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             >
               {clients.length === 0 ? (
                 <option value="">No existing client found (Acme Corp fallback)</option>
@@ -139,7 +139,7 @@ export function ConvertInquiryModal({
 
           <div>
             <label htmlFor="convert-project-name" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              NEW PROJECT WORKSPACE NAME <span className="text-emerald-400">*</span>
+              NEW PROJECT WORKSPACE NAME <span className="text-brand-yellow">*</span>
             </label>
             <input
               id="convert-project-name"
@@ -148,7 +148,7 @@ export function ConvertInquiryModal({
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
               placeholder="e.g. Horizon Founder Series Q4"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -161,7 +161,7 @@ export function ConvertInquiryModal({
                 id="convert-service"
                 value={serviceType}
                 onChange={(e) => setServiceType(e.target.value)}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               >
                 {SERVICE_OPTIONS.map((srv) => (
                   <option key={srv} value={srv}>
@@ -182,7 +182,7 @@ export function ConvertInquiryModal({
                 max="10"
                 value={revisionLimit}
                 onChange={(e) => setRevisionLimit(e.target.value)}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -196,7 +196,7 @@ export function ConvertInquiryModal({
               type="date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 

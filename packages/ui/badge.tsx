@@ -16,11 +16,11 @@ export function Badge({
 
   const variants = {
     default: "bg-slate-800 text-slate-300 border-slate-700",
-    brand: "bg-emerald-950/80 text-emerald-400 border-emerald-800/80",
-    success: "bg-emerald-950 text-emerald-400 border-emerald-800",
-    warning: "bg-amber-950/80 text-amber-400 border-amber-800/80",
+    brand: "bg-brand-yellow text-brand-black border-brand-yellow-dark font-bold",
+    success: "bg-brand-yellow/20 text-brand-yellow border-brand-yellow/40 font-bold",
+    warning: "bg-brand-orange/20 text-brand-orange border-brand-orange/40 font-bold",
     danger: "bg-red-950/80 text-red-400 border-red-800/80",
-    outline: "bg-transparent text-slate-300 border-slate-700"
+    outline: "bg-transparent text-brand-yellow border-brand-yellow/50 font-bold"
   };
 
   const sizes = {

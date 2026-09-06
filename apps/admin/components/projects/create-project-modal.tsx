@@ -75,7 +75,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
           <div
             className={`p-3 rounded-xl text-xs font-mono border ${
               message.type === "success"
-                ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+                ? "bg-brand-yellow/10 border-brand-yellow/40 text-brand-yellow"
                 : "bg-red-950/60 border-red-500/60 text-red-300"
             }`}
           >
@@ -86,7 +86,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="project-client" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              ASSIGNED CLIENT <span className="text-emerald-400">*</span>
+              ASSIGNED CLIENT <span className="text-brand-yellow">*</span>
             </label>
             <select
               id="project-client"
@@ -94,7 +94,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
               required
               value={clientId}
               onChange={(e) => setClientId(e.target.value)}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             >
               {clients.length === 0 ? (
                 <option value="">No clients found (Acme Corp fallback)</option>
@@ -110,7 +110,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
 
           <div>
             <label htmlFor="project-name" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              PROJECT NAME <span className="text-emerald-400">*</span>
+              PROJECT NAME <span className="text-brand-yellow">*</span>
             </label>
             <input
               id="project-name"
@@ -120,7 +120,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Acme Brand Anthem 2026"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -134,7 +134,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
                 name="serviceType"
                 value={serviceType}
                 onChange={(e) => setServiceType(e.target.value)}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               >
                 {SERVICE_OPTIONS.map((srv) => (
                   <option key={srv} value={srv}>
@@ -156,7 +156,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
                 max="10"
                 value={revisionLimit}
                 onChange={(e) => setRevisionLimit(e.target.value)}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -171,7 +171,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
               type="date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -186,7 +186,7 @@ export function CreateProjectModal({ isOpen, onClose, onSuccess }: CreateProject
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Key project objectives, deliverables, and specifications..."
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 

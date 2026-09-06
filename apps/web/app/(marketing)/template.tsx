@@ -25,9 +25,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
       {/* Route Transition Overlay */}
       {isTransitioning && !prefersReduced && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950 transition-opacity duration-300 pointer-events-none">
-          <div className="flex items-center gap-1 font-mono font-extrabold text-2xl tracking-widest text-emerald-400 animate-pulse">
+          <div className="flex items-center gap-1 font-mono font-extrabold text-2xl tracking-widest text-brand-yellow animate-pulse">
             <span>S</span>
-            <span className="text-white">2</span>
+            <span className="text-brand-orange">2</span>
             <span>S</span>
           </div>
         </div>

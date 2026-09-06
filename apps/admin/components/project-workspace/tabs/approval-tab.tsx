@@ -64,16 +64,16 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
 
       {isApproved ? (
         /* APPROVED STATE - LEGAL SIGN-OFF CERTIFICATE */
-        <Card variant="bordered" className="p-8 bg-slate-900/90 border-emerald-500/40 space-y-6 shadow-2xl relative overflow-hidden">
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <Card variant="bordered" className="p-8 bg-slate-900/90 border-brand-yellow/40 space-y-6 shadow-2xl relative overflow-hidden">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
 
           {/* Certificate Badge Header */}
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-950 border border-emerald-500/50 flex items-center justify-center text-emerald-400 text-2xl shadow-lg shadow-emerald-950/60">
+            <div className="w-14 h-14 rounded-2xl bg-slate-950 border border-brand-yellow/50 flex items-center justify-center text-brand-yellow text-2xl shadow-lg shadow-black/60">
               🏆
             </div>
             <div>
-              <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest font-bold">
+              <span className="text-[10px] font-mono text-brand-yellow uppercase tracking-widest font-bold">
                 OFFICIAL CLIENT SIGN-OFF CERTIFICATE
               </span>
               <h2 className="text-xl font-extrabold text-white tracking-tight uppercase">
@@ -94,7 +94,7 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
 
               <div>
                 <span className="text-slate-500 text-[10px] block uppercase">APPROVED BY CLIENT:</span>
-                <span className="text-emerald-400 font-bold">
+                <span className="text-brand-yellow font-bold">
                   {approvalRecord?.approvedByName || "Client Authorized Signer"}
                 </span>
                 <span className="text-slate-400 text-[11px] block">
@@ -118,7 +118,7 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
 
               <div>
                 <span className="text-slate-500 text-[10px] block uppercase">PROJECT STATUS:</span>
-                <span className="text-emerald-400 font-bold">DELIVERED (Timeline 100% Complete)</span>
+                <span className="text-brand-yellow font-bold">DELIVERED (Timeline 100% Complete)</span>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
           )}
 
           {/* Next Steps for Admin */}
-          <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/60 text-xs font-mono text-emerald-300 space-y-2">
+          <div className="p-4 rounded-xl bg-brand-yellow/10 border border-brand-yellow/40 text-xs font-mono text-brand-yellow space-y-2">
             <p className="font-bold flex items-center gap-2">
               <span>✓ Deliverables Released</span>
             </p>
@@ -145,11 +145,11 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
         /* PENDING STATE - AWAITING CLIENT SIGN-OFF */
         <Card variant="bordered" className="p-8 bg-slate-900/90 border-slate-800 space-y-6">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-amber-950 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl font-mono">
+            <div className="w-12 h-12 rounded-xl bg-slate-950 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl font-mono">
               ⏳
             </div>
             <div>
-              <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest font-bold">
+              <span className="text-[10px] font-mono text-brand-orange uppercase tracking-widest font-bold">
                 SIGN-OFF PENDING
               </span>
               <h3 className="text-lg font-bold text-white font-mono uppercase">

@@ -216,11 +216,11 @@ export function InquiryWizard() {
     <div className="py-12 px-6 max-w-4xl mx-auto space-y-10">
       {/* Header Section */}
       <div className="text-center space-y-3">
-        <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+        <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
           PROJECT INQUIRY FORM
         </Label>
         <Display size="2xl" className="tracking-tighter uppercase text-white">
-          LET'S <span className="text-emerald-500 font-mono">/</span> CREATE.
+          LET'S <span className="text-brand-orange font-mono">/</span> CREATE.
         </Display>
         <p className="text-sm md:text-base text-slate-400 max-w-lg mx-auto">
           Tell us about your project vision, timeline, and goals. We will build a tailored production roadmap for your brand.
@@ -230,7 +230,7 @@ export function InquiryWizard() {
       {/* Wizard Progress Indicator */}
       <div className="space-y-3 max-w-2xl mx-auto">
         <div className="flex items-center justify-between text-xs font-mono text-slate-400">
-          <span className="text-emerald-400 font-bold">
+          <span className="text-brand-yellow font-bold">
             STEP 0{currentStep} OF 05
           </span>
           <span className="uppercase text-slate-500">
@@ -241,7 +241,7 @@ export function InquiryWizard() {
         {/* Progress Bar Track */}
         <div className="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
           <div
-            className="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 transition-all duration-300 ease-out"
+            className="h-full bg-gradient-to-r from-brand-orange to-brand-yellow transition-all duration-300 ease-out"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
@@ -262,7 +262,7 @@ export function InquiryWizard() {
                 disabled={!isCompleted && !isActive}
                 className={`py-1 px-2 rounded-md text-[10px] font-mono transition-all text-center border truncate ${
                   isActive
-                    ? "bg-emerald-950 text-emerald-300 border-emerald-500/60 font-bold"
+                    ? "bg-brand-yellow/10 text-brand-yellow border-brand-yellow/60 font-bold"
                     : isCompleted
                     ? "bg-surface-100 text-slate-300 border-slate-700 cursor-pointer hover:border-slate-500"
                     : "bg-surface-100/30 text-slate-600 border-slate-850 cursor-not-allowed"
@@ -323,18 +323,18 @@ export function InquiryWizard() {
                     onClick={() => toggleService(option.name)}
                     className={`p-5 rounded-xl border cursor-pointer transition-all duration-200 flex items-start gap-4 ${
                       isSelected
-                        ? "bg-emerald-950/40 border-emerald-500 shadow-md shadow-emerald-950/40"
+                        ? "bg-brand-yellow/10 border-brand-yellow shadow-md shadow-brand-yellow/10"
                         : "bg-surface-100/50 border-slate-800 hover:border-slate-700"
                     }`}
                   >
                     <div
                       className={`w-5 h-5 rounded mt-0.5 flex items-center justify-center transition-colors border ${
                         isSelected
-                          ? "bg-emerald-500 border-emerald-400 text-slate-950"
+                          ? "bg-brand-yellow border-brand-yellow text-slate-900"
                           : "bg-slate-900 border-slate-700"
                       }`}
                     >
-                      {isSelected && <span className="text-xs font-bold">✓</span>}
+                      {isSelected && <span className="text-xs font-bold text-slate-950">✓</span>}
                     </div>
                     <div>
                       <h4 className="text-base font-bold text-white tracking-tight">
@@ -377,7 +377,7 @@ export function InquiryWizard() {
                 rows={6}
                 placeholder="E.g., We are launching a new SaaS product in Q3 and need a 90-second cinematic product reveal video, 3 YouTube thumbnail variants, and social teaser cutdowns..."
                 className={`w-full rounded-xl bg-surface-100 border p-4 text-sm text-white focus:outline-none transition-colors ${
-                  fieldErrors.projectDetails ? "border-red-500 focus:border-red-400" : "border-slate-800 focus:border-emerald-500"
+                  fieldErrors.projectDetails ? "border-red-500 focus:border-red-400" : "border-slate-800 focus:border-brand-yellow"
                 }`}
               />
               <div className="flex justify-between items-center mt-2 text-xs font-mono text-slate-500">
@@ -416,13 +416,13 @@ export function InquiryWizard() {
                     }}
                     className={`p-4 rounded-xl border cursor-pointer transition-all duration-200 flex items-center gap-3 ${
                       isSelected
-                        ? "bg-emerald-950/40 border-emerald-500 shadow-md shadow-emerald-950/40"
+                        ? "bg-brand-yellow/10 border-brand-yellow shadow-md shadow-brand-yellow/10"
                         : "bg-surface-100/50 border-slate-800 hover:border-slate-700"
                     }`}
                   >
                     <div
                       className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                        isSelected ? "border-emerald-400 bg-emerald-500" : "border-slate-700"
+                        isSelected ? "border-brand-yellow bg-brand-yellow" : "border-slate-700"
                       }`}
                     >
                       {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-slate-950" />}
@@ -465,7 +465,7 @@ export function InquiryWizard() {
                   }}
                   placeholder="Jane Doe"
                   className={`w-full rounded-xl bg-surface-100 border px-4 py-3 text-sm text-white focus:outline-none transition-colors ${
-                    fieldErrors.fullName ? "border-red-500" : "border-slate-800 focus:border-emerald-500"
+                    fieldErrors.fullName ? "border-red-500" : "border-slate-800 focus:border-brand-yellow"
                   }`}
                 />
                 {fieldErrors.fullName && (
@@ -486,7 +486,7 @@ export function InquiryWizard() {
                   }}
                   placeholder="jane@company.com"
                   className={`w-full rounded-xl bg-surface-100 border px-4 py-3 text-sm text-white focus:outline-none transition-colors ${
-                    fieldErrors.email ? "border-red-500" : "border-slate-800 focus:border-emerald-500"
+                    fieldErrors.email ? "border-red-500" : "border-slate-800 focus:border-brand-yellow"
                   }`}
                 />
                 {fieldErrors.email && (
@@ -503,7 +503,7 @@ export function InquiryWizard() {
                   value={formData.phone || ""}
                   onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                   placeholder="+1 (555) 000-0000"
-                  className="w-full rounded-xl bg-surface-100 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full rounded-xl bg-surface-100 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
                 />
               </div>
 
@@ -516,7 +516,7 @@ export function InquiryWizard() {
                   value={formData.company || ""}
                   onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
                   placeholder="Acme Studios"
-                  className="w-full rounded-xl bg-surface-100 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full rounded-xl bg-surface-100 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
                 />
               </div>
             </div>
@@ -549,7 +549,7 @@ export function InquiryWizard() {
                       onClick={() => setFormData((prev) => ({ ...prev, budgetRange: budget }))}
                       className={`px-4 py-2 rounded-lg text-xs font-mono transition-all border ${
                         isSelected
-                          ? "bg-emerald-600 text-white border-emerald-500 font-bold"
+                          ? "bg-brand-orange text-white border-brand-orange font-bold"
                           : "bg-surface-100 text-slate-300 border-slate-800 hover:border-slate-700"
                       }`}
                     >
@@ -569,7 +569,7 @@ export function InquiryWizard() {
                 onChange={(e) => setFormData((prev) => ({ ...prev, referenceLinks: e.target.value }))}
                 rows={3}
                 placeholder="Paste YouTube links, Vimeo references, Google Drive moodboards, or competitor channels..."
-                className="w-full rounded-xl bg-surface-100 border border-slate-800 p-4 text-sm text-white focus:outline-none focus:border-emerald-500"
+                className="w-full rounded-xl bg-surface-100 border border-slate-800 p-4 text-sm text-white focus:outline-none focus:border-brand-yellow"
               />
             </div>
           </div>

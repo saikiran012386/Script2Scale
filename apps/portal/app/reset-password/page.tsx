@@ -48,7 +48,7 @@ function ResetPasswordContent() {
     <div className="min-h-[80vh] flex flex-col justify-center items-center py-12 px-6">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
-          <Label uppercase mono size="xs" className="text-emerald-400">
+          <Label uppercase mono size="xs" className="text-brand-yellow">
             ACCOUNT RECOVERY
           </Label>
           <Display size="xl" className="tracking-tighter uppercase text-white">
@@ -79,7 +79,7 @@ function ResetPasswordContent() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   required
-                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
                 />
               </div>
 
@@ -94,7 +94,7 @@ function ResetPasswordContent() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="••••••••"
                   required
-                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-yellow"
                 />
               </div>
 

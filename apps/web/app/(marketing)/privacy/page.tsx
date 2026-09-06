@@ -13,11 +13,11 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Header */}
         <div className="border-b border-slate-800 pb-8 space-y-3">
-          <Label uppercase mono size="xs" className="text-emerald-400 block tracking-widest">
+          <Label uppercase mono size="xs" className="text-brand-yellow block tracking-widest">
             LEGAL DISCLOSURE
           </Label>
           <Display size="2xl" className="tracking-tighter uppercase text-white">
-            PRIVACY <span className="text-emerald-500 font-mono">/</span> POLICY.
+            PRIVACY <span className="text-brand-orange font-mono">/</span> POLICY.
           </Display>
           <p className="text-sm font-mono text-slate-400">
             Last Updated: January 2026 · Script2Scale Post-Production Studio
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
               01. Information We Collect
             </h3>
             <p>
-              When you submit an inquiry through our project wizard at <a href="/start-a-project" className="text-emerald-400 underline">/start-a-project</a>, we collect your name, email address, phone number, company name, project requirements, budget range, and reference materials. This information is used strictly to prepare production proposals and deliver video post-production services.
+              When you submit an inquiry through our project wizard at <a href="/start-a-project" className="text-brand-yellow underline">/start-a-project</a>, we collect your name, email address, phone number, company name, project requirements, budget range, and reference materials. This information is used strictly to prepare production proposals and deliver video post-production services.
             </p>
           </Card>
 
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
               03. Analytics & Sound Preferences
             </h3>
             <p>
-              We store minimal local browser session preferences (such as your "ENTER WITH SOUND" audio preference) in <code className="font-mono text-emerald-400 text-xs bg-slate-900 px-2 py-1 rounded">localStorage</code> to ensure a seamless media playback experience across page navigations. We do not sell or share client data with third-party advertising brokers.
+              We store minimal local browser session preferences (such as your "ENTER WITH SOUND" audio preference) in <code className="font-mono text-brand-yellow text-xs bg-slate-900 px-2 py-1 rounded">localStorage</code> to ensure a seamless media playback experience across page navigations. We do not sell or share client data with third-party advertising brokers.
             </p>
           </Card>
 
@@ -58,14 +58,14 @@ export default function PrivacyPolicyPage() {
               04. Contact & Data Inquiries
             </h3>
             <p>
-              If you have questions regarding this Privacy Policy or wish to request data deletion, please contact our privacy compliance team at <a href="mailto:privacy@script2scale.com" className="text-emerald-400 underline">privacy@script2scale.com</a>.
+              If you have questions regarding this Privacy Policy or wish to request data deletion, please contact our privacy compliance team at <a href="mailto:privacy@script2scale.com" className="text-brand-yellow underline">privacy@script2scale.com</a>.
             </p>
           </Card>
         </div>
 
         {/* Back Link */}
         <div className="pt-6 border-t border-slate-800 flex justify-between items-center text-xs font-mono text-slate-500">
-          <a href="/" className="hover:text-emerald-400 transition-colors">
+          <a href="/" className="hover:text-brand-yellow transition-colors">
             ← RETURN TO HOMEPAGE
           </a>
           <span>Script2Scale Studio</span>

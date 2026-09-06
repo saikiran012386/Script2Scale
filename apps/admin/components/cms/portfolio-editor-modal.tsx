@@ -158,7 +158,7 @@ export function PortfolioEditorModal({
           <div
             className={`p-3 rounded-xl text-xs font-mono border ${
               message.type === "success"
-                ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+                ? "bg-brand-yellow/10 border-brand-yellow/40 text-brand-yellow"
                 : "bg-red-950/60 border-red-500/60 text-red-300"
             }`}
           >
@@ -170,7 +170,7 @@ export function PortfolioEditorModal({
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="portfolio-title" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-                PROJECT TITLE <span className="text-emerald-400">*</span>
+                PROJECT TITLE <span className="text-brand-yellow">*</span>
               </label>
               <input
                 id="portfolio-title"
@@ -179,19 +179,19 @@ export function PortfolioEditorModal({
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g. Cyberpunk Creator Thumbnail Set"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
             <div>
               <label htmlFor="portfolio-category" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-                CATEGORY <span className="text-emerald-400">*</span>
+                CATEGORY <span className="text-brand-yellow">*</span>
               </label>
               <select
                 id="portfolio-category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value as ProjectCategory)}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               >
                 {CATEGORY_OPTIONS.map((opt) => (
                   <option key={opt.value} value={opt.value}>
@@ -213,7 +213,7 @@ export function PortfolioEditorModal({
                 value={client}
                 onChange={(e) => setClient(e.target.value)}
                 placeholder="e.g. Nexus Gaming"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -227,7 +227,7 @@ export function PortfolioEditorModal({
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
                 placeholder="2026"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -242,7 +242,7 @@ export function PortfolioEditorModal({
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="High-impact commercial video engineered for global launch..."
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -256,7 +256,7 @@ export function PortfolioEditorModal({
               value={narrative}
               onChange={(e) => setNarrative(e.target.value)}
               placeholder="We developed a 90-second cinematic brand anthem focused on fast-paced visual hooks..."
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -271,7 +271,7 @@ export function PortfolioEditorModal({
                 value={tools}
                 onChange={(e) => setTools(e.target.value)}
                 placeholder="DaVinci Resolve, Premiere Pro, After Effects"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -285,7 +285,7 @@ export function PortfolioEditorModal({
                 value={results}
                 onChange={(e) => setResults(e.target.value)}
                 placeholder="Achieved 2.4x higher watch time & 14.8% CTR"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -296,7 +296,7 @@ export function PortfolioEditorModal({
               <label className="text-xs font-mono uppercase text-slate-300">
                 THUMBNAIL IMAGE (PRESIGNED UPLOAD)
               </label>
-              <span className="text-[10px] font-mono text-emerald-400">
+              <span className="text-[10px] font-mono text-brand-yellow">
                 {isUploadingThumbnail ? "UPLOADING TO STORAGE..." : "IMAGE READY"}
               </span>
             </div>
@@ -305,7 +305,7 @@ export function PortfolioEditorModal({
                 type="file"
                 accept="image/*"
                 onChange={handleThumbnailFileUpload}
-                className="text-xs text-slate-400 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-emerald-400 hover:file:bg-slate-700 cursor-pointer"
+                className="text-xs text-slate-400 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-brand-yellow hover:file:bg-slate-700 cursor-pointer"
               />
               <input
                 type="text"
@@ -323,7 +323,7 @@ export function PortfolioEditorModal({
               <label className="text-xs font-mono uppercase text-slate-300">
                 PREVIEW VIDEO REEL (PRESIGNED UPLOAD)
               </label>
-              <span className="text-[10px] font-mono text-emerald-400">
+              <span className="text-[10px] font-mono text-brand-yellow">
                 {isUploadingVideo ? "UPLOADING VIDEO..." : "VIDEO READY"}
               </span>
             </div>
@@ -332,7 +332,7 @@ export function PortfolioEditorModal({
                 type="file"
                 accept="video/*"
                 onChange={handleVideoFileUpload}
-                className="text-xs text-slate-400 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-emerald-400 hover:file:bg-slate-700 cursor-pointer"
+                className="text-xs text-slate-400 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-brand-yellow hover:file:bg-slate-700 cursor-pointer"
               />
               <input
                 type="text"
@@ -351,7 +351,7 @@ export function PortfolioEditorModal({
                 type="checkbox"
                 checked={isPublished}
                 onChange={(e) => setIsPublished(e.target.checked)}
-                className="w-4 h-4 rounded accent-emerald-500 bg-slate-900 border-slate-700"
+                className="w-4 h-4 rounded accent-brand-yellow bg-slate-900 border-slate-700"
               />
               <div>
                 <span className="text-xs font-mono font-bold text-white block">PUBLISHED</span>
@@ -364,7 +364,7 @@ export function PortfolioEditorModal({
                 type="checkbox"
                 checked={isFeatured}
                 onChange={(e) => setIsFeatured(e.target.checked)}
-                className="w-4 h-4 rounded accent-emerald-500 bg-slate-900 border-slate-700"
+                className="w-4 h-4 rounded accent-brand-yellow bg-slate-900 border-slate-700"
               />
               <div>
                 <span className="text-xs font-mono font-bold text-white block">FEATURED</span>

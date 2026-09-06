@@ -43,7 +43,7 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
         setIsHovered(false);
         setIsTouchActive(false);
       }}
-      className="group relative cursor-pointer rounded-2xl overflow-hidden bg-surface-100 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-surface-0 transition-all duration-300"
+      className="group relative cursor-pointer rounded-2xl overflow-hidden bg-surface-100 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 focus:ring-offset-surface-0 transition-all duration-300"
     >
       {/* Thumbnail / Video Container */}
       <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
@@ -54,7 +54,7 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
           }`}
         >
           <div className="text-center p-4">
-            <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest block mb-1">
+            <span className="font-mono text-xs text-brand-yellow uppercase tracking-widest block mb-1">
               [{project.category}]
             </span>
             <span className="text-slate-600 font-mono text-xs">
@@ -79,17 +79,17 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
             isHovered || isTouchActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-90"
           }`}
         >
-          <span className="text-xs font-mono text-emerald-400 font-semibold tracking-wider uppercase mb-1 block">
+          <span className="text-xs font-mono text-brand-yellow font-semibold tracking-wider uppercase mb-1 block">
             {project.client}
           </span>
-          <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors">
+          <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-brand-yellow transition-colors">
             {project.title}
           </h3>
           <p className="text-xs text-slate-300 mt-2 line-clamp-2">
             {project.description}
           </p>
 
-          <div className="mt-4 flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 group-hover:translate-x-1 transition-transform">
+          <div className="mt-4 flex items-center gap-2 text-xs font-mono font-bold text-brand-orange group-hover:translate-x-1 transition-transform">
             <span>VIEW PROJECT</span>
             <span>→</span>
           </div>

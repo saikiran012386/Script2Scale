@@ -143,7 +143,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
 
         <Button
           onClick={() => setShowUploadModal(true)}
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold px-4 py-2 rounded-xl shadow-lg"
+          className="bg-brand-yellow hover:bg-brand-yellow-light text-brand-black font-mono text-xs font-bold px-4 py-2 rounded-xl shadow-lg"
         >
           + Upload New Cut (Draft)
         </Button>
@@ -157,9 +157,9 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
         </div>
       )}
       {successMessage && (
-        <div className="p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-xs font-mono flex justify-between items-center">
+        <div className="p-4 rounded-xl bg-brand-yellow/10 border border-brand-yellow/40 text-brand-yellow text-xs font-mono flex justify-between items-center">
           <span>✓ {successMessage}</span>
-          <button onClick={() => setSuccessMessage(null)} className="text-emerald-400 hover:text-white">✕</button>
+          <button onClick={() => setSuccessMessage(null)} className="text-brand-yellow hover:text-white">✕</button>
         </div>
       )}
 
@@ -188,7 +188,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                   placeholder="e.g. Version 2 - Fine Cut with Motion Graphics"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-brand-yellow"
                 />
               </div>
 
@@ -199,7 +199,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                   placeholder="e.g. V2, Revision 1, Final Cut"
                   value={versionLabel}
                   onChange={(e) => setVersionLabel(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-brand-yellow"
                 />
               </div>
             </div>
@@ -211,7 +211,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                 placeholder="Notes on color grade, audio mix, motion graphics changes..."
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-emerald-500"
+                className="w-full bg-slate-950 border border-slate-800 text-white rounded-lg p-2.5 focus:outline-none focus:border-brand-yellow"
               />
             </div>
 
@@ -221,16 +221,16 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                 type="file"
                 accept="video/mp4,video/quicktime,video/mkv"
                 onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
-                className="w-full bg-slate-950 border border-slate-800 text-slate-300 rounded-lg p-2 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-emerald-400 hover:file:bg-slate-700"
+                className="w-full bg-slate-950 border border-slate-800 text-slate-300 rounded-lg p-2 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-mono file:bg-slate-800 file:text-brand-yellow hover:file:bg-slate-700"
               />
             </div>
 
             {uploading && (
               <div className="space-y-1">
                 <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                  <div className="bg-emerald-500 h-full transition-all duration-300" style={{ width: `${uploadProgress}%` }} />
+                  <div className="bg-brand-yellow h-full transition-all duration-300" style={{ width: `${uploadProgress}%` }} />
                 </div>
-                <span className="text-[11px] text-emerald-400">{uploadProgress}% uploading...</span>
+                <span className="text-[11px] text-brand-yellow">{uploadProgress}% uploading...</span>
               </div>
             )}
 
@@ -245,7 +245,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
               <button
                 type="submit"
                 disabled={uploading}
-                className="px-5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold"
+                className="px-5 py-2 rounded-lg bg-brand-orange hover:bg-brand-orange-light text-white font-bold"
               >
                 {uploading ? "Saving Draft..." : "Save Private Draft"}
               </button>
@@ -266,7 +266,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                 key={ver.id}
                 variant="bordered"
                 className={`p-6 bg-slate-900/90 border-slate-800 transition-all ${
-                  isDraft ? "border-amber-500/40 bg-slate-900/95" : "border-emerald-500/30"
+                  isDraft ? "border-brand-orange/40 bg-slate-900/95" : "border-brand-yellow/30"
                 }`}
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
@@ -296,7 +296,7 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                       {ver.publishedAt && (
                         <>
                           <span>•</span>
-                          <span className="text-emerald-400">
+                          <span className="text-brand-yellow">
                             Published to Client: {new Date(ver.publishedAt).toLocaleString()}
                           </span>
                         </>
@@ -309,12 +309,12 @@ export function AdminVersionsTab({ projectId }: AdminVersionsTabProps) {
                     {isDraft ? (
                       <button
                         onClick={() => handlePublish(ver.id, ver.title)}
-                        className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold shadow-lg shadow-emerald-950/40 transition-all flex items-center gap-1.5"
+                        className="px-4 py-2 rounded-xl bg-brand-orange hover:bg-brand-orange-light text-white font-mono text-xs font-bold shadow-lg transition-all flex items-center gap-1.5"
                       >
                         <span>🚀 Publish for Client Review</span>
                       </button>
                     ) : (
-                      <span className="text-xs font-mono text-emerald-400 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-800">
+                      <span className="text-xs font-mono text-brand-yellow px-3 py-1.5 rounded-lg bg-brand-yellow/10 border border-brand-yellow/40">
                         ✓ Published & Visible to Client
                       </span>
                     )}

@@ -99,11 +99,11 @@ export default function CMSServicesPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
             WEBSITE CONTENT MANAGEMENT
           </span>
           <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-            SERVICES <span className="text-emerald-500 font-mono">&</span> TESTIMONIALS.
+            SERVICES <span className="text-brand-yellow font-mono">&</span> TESTIMONIALS.
           </h1>
           <p className="text-sm text-slate-400">
             Edit service offerings, preview media URLs, sub-offering bullet points, and client testimonial quotes.
@@ -116,7 +116,7 @@ export default function CMSServicesPage() {
             onClick={() => setActiveTab("SERVICES")}
             className={`px-4 py-2 rounded-lg text-xs font-mono font-bold transition-all ${
               activeTab === "SERVICES"
-                ? "bg-emerald-600 text-white"
+                ? "bg-brand-yellow text-brand-black"
                 : "text-slate-400 hover:text-white"
             }`}
           >
@@ -126,7 +126,7 @@ export default function CMSServicesPage() {
             onClick={() => setActiveTab("TESTIMONIALS")}
             className={`px-4 py-2 rounded-lg text-xs font-mono font-bold transition-all ${
               activeTab === "TESTIMONIALS"
-                ? "bg-emerald-600 text-white"
+                ? "bg-brand-yellow text-brand-black"
                 : "text-slate-400 hover:text-white"
             }`}
           >
@@ -140,7 +140,7 @@ export default function CMSServicesPage() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -176,7 +176,7 @@ export default function CMSServicesPage() {
                       name="shortDesc"
                       type="text"
                       defaultValue={srv.shortDesc}
-                      className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
                     />
                   </div>
 
@@ -188,7 +188,7 @@ export default function CMSServicesPage() {
                       name="previewVideoUrl"
                       type="text"
                       defaultValue={srv.previewVideoUrl || ""}
-                      className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
                     />
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function CMSServicesPage() {
                     name="longDesc"
                     rows={2}
                     defaultValue={srv.longDesc}
-                    className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
                   />
                 </div>
 
@@ -213,7 +213,7 @@ export default function CMSServicesPage() {
                     name="subOfferings"
                     type="text"
                     defaultValue={srv.subOfferings ? srv.subOfferings.join(", ") : ""}
-                    className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-emerald-400 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-brand-yellow font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
                   />
                 </div>
 
@@ -261,7 +261,7 @@ export default function CMSServicesPage() {
                         <p className="text-xs text-slate-400">{t.clientRole} — {t.companyName}</p>
                       </div>
                     </div>
-                    <span className="text-xs font-mono text-amber-400">{"★".repeat(t.rating)}</span>
+                    <span className="text-xs font-mono text-brand-orange">{"★".repeat(t.rating)}</span>
                   </div>
 
                   <p className="text-xs text-slate-300 italic leading-relaxed">
@@ -275,7 +275,7 @@ export default function CMSServicesPage() {
                       setEditingTestimonial(t);
                       setIsTestimonialModalOpen(true);
                     }}
-                    className="text-xs font-mono font-bold text-emerald-400 hover:underline"
+                    className="text-xs font-mono font-bold text-brand-yellow hover:underline"
                   >
                     EDIT
                   </button>
@@ -303,7 +303,7 @@ export default function CMSServicesPage() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="t-clientName" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-                CLIENT NAME <span className="text-emerald-400">*</span>
+                CLIENT NAME <span className="text-brand-yellow">*</span>
               </label>
               <input
                 id="t-clientName"
@@ -312,7 +312,7 @@ export default function CMSServicesPage() {
                 required
                 defaultValue={editingTestimonial?.clientName || ""}
                 placeholder="e.g. David Chen"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -326,7 +326,7 @@ export default function CMSServicesPage() {
                 type="text"
                 defaultValue={editingTestimonial?.companyName || ""}
                 placeholder="e.g. Acme Corp"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
           </div>
@@ -342,7 +342,7 @@ export default function CMSServicesPage() {
                 type="text"
                 defaultValue={editingTestimonial?.clientRole || ""}
                 placeholder="e.g. VP of Marketing"
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow"
               />
             </div>
 
@@ -357,14 +357,14 @@ export default function CMSServicesPage() {
                 min="1"
                 max="5"
                 defaultValue={editingTestimonial?.rating || 5}
-                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 font-mono"
+                className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow font-mono"
               />
             </div>
           </div>
 
           <div>
             <label htmlFor="t-quote" className="block text-xs font-mono uppercase text-slate-300 mb-1">
-              TESTIMONIAL QUOTE <span className="text-emerald-400">*</span>
+              TESTIMONIAL QUOTE <span className="text-brand-yellow">*</span>
             </label>
             <textarea
               id="t-quote"
@@ -373,7 +373,7 @@ export default function CMSServicesPage() {
               required
               defaultValue={editingTestimonial?.quote || ""}
               placeholder="Script2Scale delivered our brand anthem in 10 days..."
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 
@@ -387,7 +387,7 @@ export default function CMSServicesPage() {
               type="text"
               defaultValue={editingTestimonial?.avatarUrl || ""}
               placeholder="/images/work/acme-thumb.jpg"
-              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-xs text-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-brand-yellow"
             />
           </div>
 

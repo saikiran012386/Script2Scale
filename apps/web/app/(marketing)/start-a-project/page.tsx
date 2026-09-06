@@ -12,7 +12,7 @@ export default function StartAProjectPage() {
     <main className="min-h-screen bg-black text-white pt-8 pb-20">
       <Suspense fallback={
         <div className="py-24 text-center space-y-4">
-          <div className="w-8 h-8 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin mx-auto" />
+          <div className="w-8 h-8 rounded-full border-2 border-brand-yellow border-t-transparent animate-spin mx-auto" />
           <p className="text-xs font-mono text-slate-500">LOADING INQUIRY FORM...</p>
         </div>
       }>

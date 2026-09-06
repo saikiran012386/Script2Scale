@@ -151,15 +151,15 @@ export default function ClientProjectFilesPage({
       {/* Top Header & Breadcrumbs */}
       <div>
         <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Dashboard
           </a>
           <span>/</span>
-          <a href="/dashboard" className="hover:text-emerald-400 transition-colors">
+          <a href="/dashboard" className="hover:text-brand-yellow transition-colors">
             Projects
           </a>
           <span>/</span>
-          <a href={`/projects/${params.projectId}`} className="hover:text-emerald-400 transition-colors">
+          <a href={`/projects/${params.projectId}`} className="hover:text-brand-yellow transition-colors">
             {project ? project.name : params.projectId}
           </a>
           <span>/</span>
@@ -196,7 +196,7 @@ export default function ClientProjectFilesPage({
           </a>
           <a
             href={`/projects/${params.projectId}/files`}
-            className="border-b-2 border-emerald-400 py-3 text-emerald-400 font-bold flex items-center gap-2"
+            className="border-b-2 border-brand-yellow py-3 text-brand-yellow font-bold flex items-center gap-2"
           >
             <span>Files & Assets</span>
           </a>
@@ -223,9 +223,9 @@ export default function ClientProjectFilesPage({
         </div>
       )}
       {successMessage && (
-        <div className="p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-xs font-mono flex justify-between items-center">
+        <div className="p-4 rounded-xl bg-brand-yellow/10 border border-brand-yellow/40 text-brand-yellow text-xs font-mono flex justify-between items-center">
           <span>✓ {successMessage}</span>
-          <button onClick={() => setSuccessMessage(null)} className="text-emerald-400 hover:text-white">✕</button>
+          <button onClick={() => setSuccessMessage(null)} className="text-brand-yellow hover:text-white">✕</button>
         </div>
       )}
 
@@ -246,7 +246,7 @@ export default function ClientProjectFilesPage({
             <select
               value={selectedUploadCategory}
               onChange={(e) => setSelectedUploadCategory(e.target.value as FileCategory)}
-              className="bg-slate-950 border border-slate-700 text-slate-200 text-xs font-mono rounded-lg px-3 py-1.5 focus:outline-none focus:border-emerald-500"
+              className="bg-slate-950 border border-slate-700 text-slate-200 text-xs font-mono rounded-lg px-3 py-1.5 focus:outline-none focus:border-brand-yellow"
             >
               <option value="RAW_FOOTAGE">Raw Footage</option>
               <option value="BRAND_ASSETS">Brand Assets</option>
@@ -256,32 +256,32 @@ export default function ClientProjectFilesPage({
         </div>
 
         {/* Dropzone Input */}
-        <label className="border-2 border-dashed border-slate-800 hover:border-emerald-500/60 transition-all rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer bg-slate-950/50 hover:bg-slate-950/80 group">
+        <label className="border-2 border-dashed border-slate-800 hover:border-brand-yellow/60 transition-all rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer bg-slate-950/50 hover:bg-slate-950/80 group">
           <input
             type="file"
             onChange={handleFileUpload}
             disabled={uploading}
             className="hidden"
           />
-          <div className="h-12 w-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-xl mb-3 text-slate-400 group-hover:text-emerald-400 group-hover:border-emerald-500/50 transition-all">
+          <div className="h-12 w-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-xl mb-3 text-slate-400 group-hover:text-brand-yellow group-hover:border-brand-yellow/50 transition-all">
             {uploading ? "⏳" : "⬆️"}
           </div>
-          <span className="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">
+          <span className="text-sm font-semibold text-white group-hover:text-brand-yellow transition-colors">
             {uploading ? "Uploading file to encrypted storage..." : "Click to select or drag & drop project files"}
           </span>
           <span className="text-xs text-slate-400 font-mono mt-1">
-            Uploading under category: <strong className="text-emerald-400">{selectedUploadCategory.replace("_", " ")}</strong> (Max 500MB)
+            Uploading under category: <strong className="text-brand-yellow">{selectedUploadCategory.replace("_", " ")}</strong> (Max 500MB)
           </span>
 
           {uploading && (
             <div className="w-full max-w-md mt-4">
               <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
                 <div
-                  className="bg-emerald-500 h-full transition-all duration-300"
+                  className="bg-brand-yellow h-full transition-all duration-300"
                   style={{ width: `${uploadProgress}%` }}
                 />
               </div>
-              <span className="text-[11px] font-mono text-emerald-400 mt-1 inline-block">{uploadProgress}% uploaded</span>
+              <span className="text-[11px] font-mono text-brand-yellow mt-1 inline-block">{uploadProgress}% uploaded</span>
             </div>
           )}
         </label>
@@ -304,12 +304,12 @@ export default function ClientProjectFilesPage({
               onClick={() => setActiveCategory(tab.id)}
               className={`px-3 py-1.5 rounded-lg border transition-all flex items-center gap-2 ${
                 active
-                  ? "bg-emerald-950/80 border-emerald-500 text-emerald-400 font-bold"
+                  ? "bg-brand-yellow/10 border-brand-yellow text-brand-yellow font-bold"
                   : "bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200"
               }`}
             >
               <span>{tab.label}</span>
-              <span className={`px-1.5 py-0.2 rounded text-[10px] ${active ? "bg-emerald-500/20 text-emerald-300" : "bg-slate-800 text-slate-400"}`}>
+              <span className={`px-1.5 py-0.2 rounded text-[10px] ${active ? "bg-brand-yellow/20 text-brand-yellow" : "bg-slate-800 text-slate-400"}`}>
                 {count}
               </span>
             </button>
@@ -346,7 +346,7 @@ export default function ClientProjectFilesPage({
                       <span>•</span>
                       <span>Uploaded {new Date(file.createdAt).toLocaleDateString()}</span>
                       <span>•</span>
-                      <span className={isClientUpload ? "text-emerald-400" : "text-amber-400"}>
+                      <span className={isClientUpload ? "text-brand-yellow" : "text-brand-orange"}>
                         {isClientUpload ? "👤 Client Upload" : "⚡ Agency Output"}
                       </span>
                     </div>
@@ -358,7 +358,7 @@ export default function ClientProjectFilesPage({
                     href={file.fileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-md transition-colors flex items-center gap-1.5"
+                    className="px-3.5 py-1.5 rounded-lg bg-brand-orange hover:bg-brand-orange-light text-white font-mono text-xs font-semibold shadow-md transition-colors flex items-center gap-1.5"
                   >
                     <span>Download</span>
                     <span>↓</span>

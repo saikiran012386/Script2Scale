@@ -39,7 +39,7 @@ export default function PortalLoginPage() {
     <div className="min-h-[80vh] flex flex-col justify-center items-center py-12 px-6">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
-          <Label uppercase mono size="xs" className="text-emerald-400">
+          <Label uppercase mono size="xs" className="text-brand-yellow">
             CLIENT PORTAL WORKSPACE
           </Label>
           <Display size="xl" className="tracking-tighter uppercase text-white">
@@ -66,7 +66,7 @@ export default function PortalLoginPage() {
                   if (error) setError(null);
                 }}
                 required
-                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 focus:ring-offset-slate-950"
               />
             </div>
 
@@ -75,7 +75,7 @@ export default function PortalLoginPage() {
                 <label htmlFor="portal-password" className="text-xs font-mono text-slate-300 uppercase">
                   PASSWORD *
                 </label>
-                <a href="/forgot-password" className="text-xs font-mono text-slate-400 hover:text-emerald-400 underline">
+                <a href="/forgot-password" className="text-xs font-mono text-slate-400 hover:text-brand-yellow underline">
                   Forgot password?
                 </a>
               </div>
@@ -89,7 +89,7 @@ export default function PortalLoginPage() {
                   if (error) setError(null);
                 }}
                 required
-                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="w-full rounded-xl bg-slate-900 border border-slate-800 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 focus:ring-offset-slate-950"
               />
             </div>
 

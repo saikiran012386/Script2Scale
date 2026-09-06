@@ -90,11 +90,11 @@ export default function ProjectsDirectoryPage() {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-mono text-brand-yellow uppercase tracking-widest block mb-1">
             AGENCY PIPELINE & PRODUCTION
           </span>
           <h1 className="text-3xl font-extrabold text-white tracking-tight uppercase">
-            PROJECTS <span className="text-emerald-500 font-mono">/</span> WORKSPACES.
+            PROJECTS <span className="text-brand-yellow font-mono">/</span> WORKSPACES.
           </h1>
           <p className="text-sm text-slate-400">
             Monitor video editing, thumbnail design, and client feedback workspaces.
@@ -116,7 +116,7 @@ export default function ProjectsDirectoryPage() {
         <div
           className={`p-4 rounded-xl text-xs font-mono border flex items-center justify-between ${
             notice.type === "success"
-              ? "bg-emerald-950/60 border-emerald-500/60 text-emerald-300"
+              ? "bg-brand-yellow/10 border-brand-yellow/50 text-brand-yellow"
               : "bg-red-950/60 border-red-500/60 text-red-300"
           }`}
         >
@@ -135,7 +135,7 @@ export default function ProjectsDirectoryPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by project name, service, or client..."
-            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-xl bg-slate-950 border border-slate-800 px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-yellow"
           />
         </div>
 
@@ -148,7 +148,7 @@ export default function ProjectsDirectoryPage() {
               onClick={() => setStatusFilter(tab)}
               className={`px-3 py-1.5 rounded-lg text-[11px] font-mono uppercase tracking-wider transition-colors ${
                 statusFilter === tab
-                  ? "bg-emerald-500 text-slate-950 font-bold"
+                  ? "bg-brand-yellow text-brand-black font-bold"
                   : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
               }`}
             >
@@ -171,10 +171,10 @@ export default function ProjectsDirectoryPage() {
               header: "Project Workspace",
               accessorKey: (p) => (
                 <div>
-                  <a href={`/projects/${p.id}`} className="font-bold text-white hover:text-emerald-400 transition-colors">
+                  <a href={`/projects/${p.id}`} className="font-bold text-white hover:text-brand-yellow transition-colors">
                     {p.name}
                   </a>
-                  {p.serviceType && <p className="text-xs text-emerald-400 font-mono">{p.serviceType}</p>}
+                  {p.serviceType && <p className="text-xs text-brand-yellow font-mono">{p.serviceType}</p>}
                 </div>
               )
             },
@@ -182,7 +182,7 @@ export default function ProjectsDirectoryPage() {
               header: "Client",
               accessorKey: (p) => (
                 <div>
-                  <a href={`/clients/${p.clientId}`} className="text-sm font-semibold text-slate-200 hover:text-emerald-400">
+                  <a href={`/clients/${p.clientId}`} className="text-sm font-semibold text-slate-200 hover:text-brand-yellow">
                     {p.companyName || p.clientName}
                   </a>
                   {p.companyName && <p className="text-xs text-slate-500 font-mono">{p.clientName}</p>}
@@ -200,7 +200,7 @@ export default function ProjectsDirectoryPage() {
                     disabled={isPending}
                     value={p.status}
                     onChange={(e) => handleStatusChange(p.id, e.target.value)}
-                    className="bg-slate-950 text-[10px] font-mono text-slate-300 border border-slate-800 rounded px-1.5 py-0.5 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    className="bg-slate-950 text-[10px] font-mono text-slate-300 border border-slate-800 rounded px-1.5 py-0.5 focus:outline-none focus:ring-1 focus:ring-brand-yellow"
                   >
                     {PROJECT_STATUSES.map((st) => (
                       <option key={st} value={st}>
@@ -232,7 +232,7 @@ export default function ProjectsDirectoryPage() {
             {
               header: "Actions",
               accessorKey: (p) => (
-                <a href={`/projects/${p.id}`} className="text-xs font-mono font-bold text-emerald-400 hover:underline">
+                <a href={`/projects/${p.id}`} className="text-xs font-mono font-bold text-brand-yellow hover:underline">
                   OPEN WORKSPACE →
                 </a>
               )
