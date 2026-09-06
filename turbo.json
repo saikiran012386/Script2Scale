@@ -3,6 +3,7 @@
   "globalDependencies": ["**/.env.*"],
   "globalEnv": [
     "DATABASE_URL",
+    "DIRECT_URL",
     "NODE_ENV",
     "AUTH_SECRET",
     "JWT_SECRET",
