@@ -137,7 +137,7 @@ export function AdminApprovalTab({ projectId }: AdminApprovalTabProps) {
               <span>✓ Deliverables Released</span>
             </p>
             <p className="text-slate-300 leading-relaxed text-[11px]">
-              The client has confirmed final approval. Upload clean unwatermarked master exports under the <strong>DELIVERABLES</strong> category in the Files tab if you haven't already.
+              The client has confirmed final approval. Upload clean master exports under the <strong>DELIVERABLES</strong> category in the Files tab if you haven't already.
             </p>
           </div>
         </Card>

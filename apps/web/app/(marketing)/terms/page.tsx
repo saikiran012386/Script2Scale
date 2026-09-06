@@ -37,10 +37,10 @@ export default function TermsOfServicePage() {
 
           <Card variant="bordered" className="p-8 bg-surface-100/40 border-slate-800 space-y-4">
             <h3 className="text-lg font-bold text-white font-mono uppercase tracking-tight">
-              02. Client Portal Review & Watermarking
+              02. Client Portal Review & Deliverables
             </h3>
             <p>
-              Draft cuts delivered for client review via the Script2Scale Client Portal feature timecode overlays and dynamic watermarks. Final unwatermarked master exports are unlocked and delivered upon formal project approval and final invoice settlement.
+              Draft cuts delivered for client review via the Script2Scale Client Portal feature timecode overlays and interactive feedback tools. Final 4K master exports are unlocked and delivered upon formal project approval and final invoice settlement.
             </p>
           </Card>
 

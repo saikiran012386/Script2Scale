@@ -253,15 +253,24 @@ export async function loginAdminAction(formData: FormData): Promise<AuthActionRe
       });
       cookies().set(AUTH_COOKIE_NAME, token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === "production" && !process.env.VERCEL_URL?.includes("localhost"),
         sameSite: "lax",
         path: "/",
         maxAge: 7 * 24 * 60 * 60
       });
       return { success: true, redirectUrl: "/dashboard" };
     }
+    console.error("[Auth Error] loginAdminAction failed:", err);
     return { success: false, message: "An unexpected authentication error occurred." };
   }
+}
+
+/**
+ * Owner / Admin Sign-Out Action
+ */
+export async function logoutAdminAction(): Promise<AuthActionResult> {
+  cookies().delete(AUTH_COOKIE_NAME);
+  return { success: true, redirectUrl: "/login" };
 }
 
 /**

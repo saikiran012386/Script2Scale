@@ -46,7 +46,7 @@ export default function AboutPage() {
             <span className="font-mono text-brand-yellow text-xs font-bold block">03. CLIENT PORTAL</span>
             <h3 className="text-xl font-bold text-white tracking-tight">Seamless Revisions</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              No endless email threads. Review watermarked video versions with frame-accurate timestamp feedback directly inside your Client Portal.
+              No endless email threads. Review video versions with frame-accurate timestamp feedback directly inside your Client Portal.
             </p>
           </Card>
         </div>

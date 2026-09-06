@@ -7,10 +7,20 @@ export function middleware(request: NextRequest) {
   const session = token ? verifySessionToken(token) : null;
   const path = request.nextUrl.pathname;
 
+  console.log(`[Portal Middleware Audit] Intercepting request:`, {
+    path,
+    tokenPresent: !!token,
+    tokenPreview: token ? `${token.substring(0, 15)}...` : "NONE",
+    sessionValid: !!session,
+    sessionRole: session?.role || "NONE",
+    authSecretPresent: !!process.env.AUTH_SECRET
+  });
+
   // Protected Portal Routes
   const isProtectedRoute = path.startsWith("/dashboard") || path.startsWith("/projects");
 
   if (isProtectedRoute && !session) {
+    console.log(`[Portal Middleware Audit] Denying access to ${path}. Redirecting to /login.`);
     const loginUrl = new URL("/login", request.url);
     loginUrl.searchParams.set("from", path);
     return NextResponse.redirect(loginUrl);
@@ -18,6 +28,7 @@ export function middleware(request: NextRequest) {
 
   // If already logged in, prevent visiting /login
   if (path === "/login" && session) {
+    console.log(`[Portal Middleware Audit] Authenticated user visiting /login. Redirecting to /dashboard.`);
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 

@@ -32,7 +32,7 @@ export default function ClientLoginPage() {
             CLIENT <span className="text-brand-orange font-mono">/</span> LOGIN.
           </Display>
           <p className="text-sm text-slate-400 leading-relaxed max-w-sm mx-auto">
-            Enter your email and password to access active video versions, watermark reviews, and project milestones.
+            Enter your email and password to access active video versions, review feedback, and project milestones.
           </p>
         </div>
 

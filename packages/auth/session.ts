@@ -9,14 +9,25 @@ export interface SessionTokenPayload extends UserSessionPayload {
   iat: number; // Issued at timestamp in seconds
 }
 
+function getAuthSecret(customSecret?: string): string {
+  if (customSecret) return customSecret;
+  return (
+    process.env.AUTH_SECRET ||
+    process.env.JWT_SECRET ||
+    process.env.NEXT_PUBLIC_AUTH_SECRET ||
+    DEFAULT_SECRET
+  );
+}
+
 /**
  * Encodes & signs a session payload using HMAC-SHA256
  */
 export function createSessionToken(
   payload: UserSessionPayload,
   expiresInSeconds: number = 7 * 24 * 60 * 60, // 7 days default
-  secret: string = process.env.AUTH_SECRET || DEFAULT_SECRET
+  customSecret?: string
 ): string {
+  const secret = getAuthSecret(customSecret);
   const iat = Math.floor(Date.now() / 1000);
   const exp = iat + expiresInSeconds;
 
@@ -43,8 +54,9 @@ export function createSessionToken(
  */
 export function verifySessionToken(
   token: string,
-  secret: string = process.env.AUTH_SECRET || DEFAULT_SECRET
+  customSecret?: string
 ): UserSessionPayload | null {
+  const secret = getAuthSecret(customSecret);
   try {
     if (!token || typeof token !== "string") return null;
     const parts = token.split(".");
