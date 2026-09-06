@@ -1,0 +1,14 @@
+{
+  "name": "@script2scale/email",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@script2scale/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@script2scale/config": "workspace:*",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "@script2scale/config/tsconfig/base.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler"
+  },
+  "include": ["**/*.ts"]
+}

@@ -1,0 +1,209 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  OWNER
+  CLIENT
+}
+
+enum ProjectStatus {
+  INQUIRY
+  DISCOVERY
+  SCRIPTING
+  PRODUCTION
+  POST_PRODUCTION
+  REVIEW
+  APPROVED
+  DELIVERED
+}
+
+enum VideoVersionStatus {
+  DRAFT
+  PROCESSING
+  WATERMARKED
+  READY_FOR_REVIEW
+  REVISION_REQUESTED
+  APPROVED
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL_SENT
+  CONVERTED
+  ARCHIVED
+}
+
+enum ClientStatus {
+  ACTIVE
+  DISABLED
+}
+
+enum FileCategory {
+  RAW_FOOTAGE
+  BRAND_ASSETS
+  REFERENCES
+  DELIVERABLES
+}
+
+model User {
+  id                  String        @id @default(cuid())
+  name                String?
+  email               String        @unique
+  passwordHash        String?
+  salt                String?
+  role                Role          @default(CLIENT)
+  clientId            String?
+  client              Client?       @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  invitationToken     String?       @unique
+  invitationExpiresAt DateTime?
+  resetToken          String?       @unique
+  resetTokenExpiresAt DateTime?
+  emailVerified       DateTime?
+  image               String?
+  feedbacks           Feedback[]
+  uploadedFiles       ProjectFile[]
+  approvals           Approval[]
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+}
+
+model Client {
+  id          String       @id @default(cuid())
+  name        String
+  companyName String?
+  email       String       @unique
+  phone       String?
+  status      ClientStatus @default(ACTIVE)
+  users       User[]
+  projects    Project[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model Project {
+  id            String        @id @default(cuid())
+  name          String
+  slug          String        @unique
+  description   String?
+  serviceType   String?
+  status        ProjectStatus @default(DISCOVERY)
+  deadline      DateTime?
+  revisionLimit Int           @default(3)
+  inquiryId     String?       @unique
+  inquiry       Inquiry?      @relation(fields: [inquiryId], references: [id], onDelete: SetNull)
+  clientId      String
+  client        Client        @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  versions      VideoVersion[]
+  files         ProjectFile[]
+  approval      Approval?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model VideoVersion {
+  id               String             @id @default(cuid())
+  projectId        String
+  project          Project            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  versionNumber    Int
+  versionLabel     String?
+  title            String
+  videoUrl         String
+  watermarkedUrl   String?
+  thumbnailUrl     String?
+  durationSeconds  Int?
+  status           VideoVersionStatus @default(DRAFT)
+  notes            String?
+  uploadedBy       String?
+  publishedAt      DateTime?
+  feedbacks        Feedback[]
+  approvals        Approval[]
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+
+  @@unique([projectId, versionNumber])
+}
+
+model Approval {
+  id             String       @id @default(cuid())
+  projectId      String       @unique
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  versionId      String
+  version        VideoVersion @relation(fields: [versionId], references: [id], onDelete: Cascade)
+  approvedById   String
+  approvedByUser User         @relation(fields: [approvedById], references: [id], onDelete: Cascade)
+  approvedAt     DateTime     @default(now())
+  notes          String?
+  ipAddress      String?
+}
+
+model Feedback {
+  id               String       @id @default(cuid())
+  versionId        String
+  version          VideoVersion @relation(fields: [versionId], references: [id], onDelete: Cascade)
+  authorId         String
+  author           User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  timestampSeconds Float
+  comment          String
+  resolved         Boolean      @default(false)
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+}
+
+model ProjectFile {
+  id           String       @id @default(cuid())
+  projectId    String
+  project      Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  category     FileCategory @default(RAW_FOOTAGE)
+  filename     String
+  fileUrl      String
+  fileKey      String?
+  fileSize     Int
+  mimeType     String
+  uploaderId   String?
+  uploaderRole Role         @default(CLIENT)
+  uploader     User?        @relation(fields: [uploaderId], references: [id], onDelete: SetNull)
+  createdAt    DateTime     @default(now())
+}
+
+model Inquiry {
+  id             String        @id @default(cuid())
+  fullName       String
+  email          String
+  phone          String?
+  company        String?
+  services       String[]
+  budgetRange    String?
+  projectDetails String
+  timeline       String?
+  referenceLinks String?
+  status         InquiryStatus @default(NEW)
+  project        Project?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model ActivityLog {
+  id          String   @id @default(cuid())
+  action      String
+  entityType  String
+  entityId    String?
+  description String
+  actorName   String?
+  metadata    String?
+  createdAt   DateTime @default(now())
+}
